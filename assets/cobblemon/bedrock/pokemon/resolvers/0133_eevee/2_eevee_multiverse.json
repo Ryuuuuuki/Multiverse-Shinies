@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:eevee",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": ["multiverseshinies", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_multiverse_female.png",
+      "model": "cobblemon:multiverse_eevee_female.geo"
+    },
+    {
+      "aspects": ["multiverseshinies", "shiny", "male"],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_multiverse_male.png",
+      "model": "cobblemon:multiverse_eevee_male.geo"
+    }
+  ]
+}

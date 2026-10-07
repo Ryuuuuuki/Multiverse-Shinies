@@ -1,0 +1,16 @@
+{
+  "pokemon": [
+    "cobblemon:eevee",
+    "cobblemon:vaporeon",
+    "cobblemon:jolteon",
+    "cobblemon:flareon",
+    "cobblemon:espeon",
+    "cobblemon:umbreon",
+    "cobblemon:leafeon",
+    "cobblemon:glaceon",
+    "cobblemon:sylveon"
+  ],
+  "features": [
+    "multiverseshinies"
+  ]
+}
