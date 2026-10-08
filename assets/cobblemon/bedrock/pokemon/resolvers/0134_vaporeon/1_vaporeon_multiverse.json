@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:vaporeon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["multiverseshinies", "female"],
+      "model": "cobblemon:multiverse_vaporeon_female.geo",
+      "texture": "cobblemon:textures/pokemon/0134_vaporeon/vaporeon_multiverse_female.png"
+    },
+    {
+      "aspects": ["multiverseshinies", "male"],
+      "model": "cobblemon:multiverse_vaporeon_male.geo",
+      "texture": "cobblemon:textures/pokemon/0134_vaporeon/vaporeon_multiverse_male.png"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "rayquaza_multiverse-1",
+      "pokemon": "rayquaza multiverseshinies=true",
+      "presets": ["natural"],
+      "type": "pokemon",
+      "spawnablePositionType": "grounded",
+      "bucket": "ultra-rare",
+      "level": "70-90",
+      "weight": 0.1,
+      "condition": {
+        "canSeeSky": true,
+        "minY": 150,
+        "biomes": ["#cobblemon:is_overworld"]
+      }
+    }
+  ]
+}

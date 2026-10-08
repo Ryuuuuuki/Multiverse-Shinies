@@ -1,0 +1,11 @@
+{
+  "species": "cobblemon:flareon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["multiverseshinies"],
+      "model": "cobblemon:multiverse_flareon.geo",
+      "texture": "cobblemon:textures/pokemon/flareon/flareon.png"
+    }
+  ]
+}
