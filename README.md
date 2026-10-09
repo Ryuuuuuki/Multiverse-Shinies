@@ -11,7 +11,8 @@ Addon para o mod [Cobblemon](https://cobblemon.com/) que adiciona variantes **"M
 | Magikarp (macho e fêmea) | ✅ | padrão | ✅ | ✅ | Funcional |
 | Gyarados | ✅ | padrão | ✅ | ✅ | Funcional |
 | Eevee (macho e fêmea) | ✅ | ✅ | ✅ | ✅ | Funcional |
-| Flareon | ✅ | ✅ | ✅ | via Eevee | Funcional (animações do original) |
+| Flareon (macho) — "Diluc" | ✅ | ✅ | ✅ | via Eevee | Funcional (animações do original) |
+| Flareon (fêmea) — "Mavuika" | ✅ | ✅ | ✅ | via Eevee | Funcional (animações do original; pontas do cabelo brilham e óculos translúcidos via camadas) |
 | Vaporeon (fêmea) — "Maestro" | ✅ | ✅ | ✅ | via Eevee | Funcional (animações do original) |
 | Vaporeon (macho) — "Neuvillette" | ✅ | ✅ | ✅ | via Eevee | Funcional (animações do original) |
 | Rayquaza | ✅ | ✅ | ✅ | ✅ | Funcional (animações do original) |
@@ -50,6 +51,8 @@ Multiverse Shinies/
     └── spawn_pool_world/           # Regras de spawn
 ```
 
+A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza, Vaporeon "Maestro", Vaporeon "Neuvillette", Flareon "Diluc" e Flareon "Mavuika"), para editar no [Blockbench](https://www.blockbench.net/). O jogo ignora essa pasta.
+
 ## Instalação
 
 1. Instale o **Cobblemon**.
@@ -62,8 +65,11 @@ Para testar, invoque um Pokémon pelo comando:
 /pokespawn eevee multiverseshinies=true shiny=true
 /pokespawn vaporeon multiverseshinies=true female=true
 /pokespawn vaporeon multiverseshinies=true male=true
-/pokespawn flareon multiverseshinies=true
+/pokespawn flareon multiverseshinies=true male=true
+/pokespawn flareon multiverseshinies=true female=true
 ```
+
+A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_female_emissive.png` (pontas neon do cabelo, brilham no escuro) e `flareon_multiverse_female_lenses.png` (lentes dos óculos, translúcidas).
 
 ## Problemas conhecidos
 
@@ -76,4 +82,4 @@ Para testar, invoque um Pokémon pelo comando:
 
 Ainda não definida.
 
-Os modelos do Vaporeon "Maestro" (fêmea) e "Neuvillette" (macho) são adaptações do modelo oficial do Vaporeon do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
+Os modelos do Vaporeon "Maestro" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) e da Flareon "Mavuika" (fêmea) são adaptações dos modelos oficiais do Vaporeon e do Flareon do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.

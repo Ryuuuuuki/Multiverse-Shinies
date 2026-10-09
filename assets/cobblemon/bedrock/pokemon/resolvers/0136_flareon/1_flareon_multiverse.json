@@ -3,9 +3,26 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["multiverseshinies"],
+      "aspects": ["multiverseshinies", "male"],
       "model": "cobblemon:multiverse_flareon.geo",
-      "texture": "cobblemon:textures/pokemon/flareon/flareon.png"
+      "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse.png"
+    },
+    {
+      "aspects": ["multiverseshinies", "female"],
+      "model": "cobblemon:multiverse_flareon_female.geo",
+      "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "lenses",
+          "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_lenses.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }
