@@ -1,0 +1,14 @@
+{
+  "species": "cobblemon:jolteon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies",
+        "female"
+      ],
+      "model": "cobblemon:multiverse_jolteon_female.geo",
+      "texture": "cobblemon:textures/pokemon/0135_jolteon/jolteon_multiverse_female.png"
+    }
+  ]
+}
