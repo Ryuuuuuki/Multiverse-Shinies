@@ -3,12 +3,18 @@
   "order": 2,
   "variations": [
     {
-      "aspects": ["multiverseshinies", "shiny"],
+      "aspects": [
+        "multiverseshinies",
+        "female"
+      ],
       "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_multiverse_female.png",
       "model": "cobblemon:multiverse_eevee_female.geo"
     },
     {
-      "aspects": ["multiverseshinies", "shiny", "male"],
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
       "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_multiverse_male.png",
       "model": "cobblemon:multiverse_eevee_male.geo"
     }

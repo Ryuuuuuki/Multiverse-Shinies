@@ -3,11 +3,9 @@
   "order": 3,
   "variations": [
     {
-      "aspects": ["multiverseshinies", "shiny"],
-      "texture": "cobblemon:textures/pokemon/0130_gyarados/gyarados_multiverse.png"
-    },
-    {
-      "aspects": ["multiverseshinies"],
+      "aspects": [
+        "multiverseshinies"
+      ],
       "texture": "cobblemon:textures/pokemon/0130_gyarados/gyarados_multiverse.png"
     }
   ]

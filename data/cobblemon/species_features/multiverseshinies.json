@@ -1,6 +1,0 @@
-{
-  "keys": ["multiverseshinies"],
-  "type": "flag",
-  "isAspect": true,
-  "default": false
-}

@@ -3,11 +3,17 @@
   "order": 3,
   "variations": [
     {
-      "aspects": ["multiverseshinies", "shiny"],
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
       "texture": "cobblemon:textures/pokemon/0129_magikarp/magikarp_multiverse_male.png"
     },
     {
-      "aspects": ["multiverseshinies", "female"],
+      "aspects": [
+        "multiverseshinies",
+        "female"
+      ],
       "texture": "cobblemon:textures/pokemon/0129_magikarp/magikarp_multiverse_female.png"
     }
   ]

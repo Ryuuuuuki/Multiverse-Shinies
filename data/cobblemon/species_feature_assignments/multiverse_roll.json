@@ -1,0 +1,13 @@
+{
+  "pokemon": [
+    "cobblemon:magikarp",
+    "cobblemon:gyarados",
+    "cobblemon:eevee",
+    "cobblemon:vaporeon",
+    "cobblemon:flareon",
+    "cobblemon:rayquaza"
+  ],
+  "features": [
+    "multiverse_roll"
+  ]
+}
