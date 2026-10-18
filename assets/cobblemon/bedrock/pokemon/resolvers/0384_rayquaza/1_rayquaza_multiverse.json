@@ -4,8 +4,16 @@
   "variations": [
     {
       "aspects": ["multiverseshinies"],
+      "poser": "cobblemon:rayquaza_multiverse",
       "model": "cobblemon:multiverse_rayquaza.geo",
-      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_multiverse.png"
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_multiverse.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_multiverse_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

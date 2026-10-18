@@ -17,13 +17,13 @@ Addon para o mod [Cobblemon](https://cobblemon.com/) que adiciona variantes **"M
 | Jolteon (fêmea) — "Fischl" | ✅ | ✅ | ✅ | Funcional (animações do original; arco nas costas) |
 | Vaporeon (fêmea) — "Furina" | ✅ | ✅ | ✅ | Funcional (animações do original) |
 | Vaporeon (macho) — "Neuvillette" | ✅ | ✅ | ✅ | Funcional (animações do original) |
-| Rayquaza | ✅ | ✅ | ✅ | Funcional (animações do original) |
+| Rayquaza — "Slifer, o Dragão Celeste" | ✅ | ✅ | ✅ | Funcional (animações e poser próprios: voo em onda vertical batendo as asas; joia da testa brilha via camada) |
 
 ## Como funciona
 
 1. **Sorteio:** `data/cobblemon/species_features/multiverse_roll.json` é uma feature do tipo `choice` com `"default": "random"`. Toda vez que o Cobblemon cria um Pokémon dessas espécies (spawn natural, spawn de outros mods, comando sem a propriedade), ele sorteia um item da lista `choices`: 511 vezes `multiverse_none` e 1 vez `multiverseshinies`, ou seja, **1 chance em 512**.
 2. **Atribuição:** `data/cobblemon/species_feature_assignments/multiverse_roll.json` liga o sorteio às espécies (Magikarp, Gyarados, Eevee, Vaporeon, Flareon, Jolteon e Rayquaza). O resultado fica salvo no Pokémon e acompanha a evolução entre essas espécies.
-3. **Visual:** quando o sorteio dá `multiverseshinies`, o Pokémon ganha esse aspect e os resolvers em `assets/cobblemon/bedrock/pokemon/resolvers/` trocam a textura e o modelo. Onde há duas versões, o gênero decide: Vaporeon fêmea = Furina, macho = Neuvillette; Flareon fêmea = Mavuika, macho = Diluc; Jolteon fêmea = Fischl, macho = Flins.
+3. **Visual:** quando o sorteio dá `multiverseshinies`, o Pokémon ganha esse aspect e os resolvers em `assets/cobblemon/bedrock/pokemon/resolvers/` trocam a textura e o modelo. Onde há duas versões, o gênero decide: Vaporeon fêmea = Furina, macho = Neuvillette; Flareon fêmea = Mavuika, macho = Diluc; Jolteon fêmea = Fischl, macho = Flins. O Rayquaza vira o Slifer, o Dragão Celeste.
 
 Não existe spawn próprio: os Pokémon aparecem onde o Cobblemon (ou outro mod) já os coloca. Para mudar a chance, ajuste quantas vezes `multiverse_none` aparece na lista `choices` (por exemplo, 1023 vezes = 1 em 1024).
 
@@ -35,6 +35,7 @@ Multiverse Shinies/
 ├── assets/cobblemon/
 │   ├── textures/pokemon/           # Texturas das variantes
 │   └── bedrock/pokemon/
+│       ├── animations/             # Animações próprias (Rayquaza "Slifer")
 │       ├── models/                 # Modelos geo customizados
 │       ├── posers/                 # Animações e poses
 │       └── resolvers/              # Mapeamento aspect → textura/modelo
@@ -44,7 +45,7 @@ Multiverse Shinies/
 └── blockbench/                     # Arquivos-fonte .bbmodel (o jogo ignora)
 ```
 
-A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza, Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl" e Jolteon "Flins"), para editar no [Blockbench](https://www.blockbench.net/).
+A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel`, com as animações; o Rayquaza Multiverse antigo continua em `rayquaza_multiverse.bbmodel`; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl" e Jolteon "Flins"), para editar no [Blockbench](https://www.blockbench.net/).
 
 ## Instalação
 
@@ -65,6 +66,8 @@ Para testar, invoque um Pokémon já com o resultado do sorteio:
 /pokespawn rayquaza multiverse_roll=multiverseshinies
 ```
 
+O Rayquaza "Slifer" tem animações próprias em `animations/0384_rayquaza/multiverse_rayquaza.animation.json` (`ground_idle`, `blink`, `eye_size`, `air_fly` e `air_idle`) e um poser próprio (`posers/0384_rayquaza/rayquaza_multiverse.json`): parado usa `ground_idle`, pairando usa `air_idle` e voando ou nadando usa `air_fly`, em que o corpo e a cauda ondulam para cima e para baixo enquanto as asas batem (o pescoço e a cabeça ficam firmes). A joia azul da testa fica em `rayquaza_multiverse_emissive.png` e brilha no escuro.
+
 A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_female_emissive.png` (pontas neon do cabelo, brilham no escuro) e `flareon_multiverse_female_lenses.png` (lentes dos óculos, translúcidas).
 
 ## Problemas conhecidos
@@ -75,16 +78,15 @@ A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_fem
 
 ## Próximas atualizações
 
-- **Animações próprias para os Pokémon Multiverse.** Hoje todos usam as animações e o poser da espécie original. A ideia é criar animações que combinem com cada personagem, por exemplo:
+- **Animações próprias para os Pokémon Multiverse.** O Rayquaza "Slifer" já tem as suas; os outros ainda usam as animações e o poser da espécie original. A ideia é criar animações que combinem com cada personagem, por exemplo:
   - Flareon "Diluc": balançar a espada nas costas no idle, golpe de espada no ataque.
   - Flareon "Mavuika": ajeitar os óculos no idle, chamas do cabelo mais vivas ao andar.
   - Vaporeon "Furina": pose teatral, girando e fazendo reverência com a cartola.
   - Vaporeon "Neuvillette": postura séria e elegante, abaixando a cabeça como cumprimento.
-  - Rayquaza: idle e voo próprios.
   - Cada animação nova precisa de um poser próprio em `posers/` apontado pelo resolver da variante.
 
 ## Licença
 
 Ainda não definida.
 
-Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) e do Jolteon "Flins" (macho) são adaptações dos modelos oficiais do Vaporeon, do Flareon e do Jolteon do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
+Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) do Jolteon "Flins" (macho) e do Rayquaza "Slifer" são adaptações dos modelos oficiais do Vaporeon, do Flareon, do Jolteon e do Rayquaza do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
