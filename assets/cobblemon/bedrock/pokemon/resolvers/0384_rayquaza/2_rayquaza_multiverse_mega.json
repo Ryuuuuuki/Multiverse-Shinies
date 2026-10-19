@@ -1,0 +1,22 @@
+{
+  "species": "cobblemon:rayquaza",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies",
+        "mega"
+      ],
+      "poser": "cobblemon:rayquaza_multiverse_mega",
+      "model": "cobblemon:multiverse_megarayquaza.geo",
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_multiverse_mega.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_multiverse_mega_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}
