@@ -6,7 +6,8 @@
     "cobblemon:vaporeon",
     "cobblemon:flareon",
     "cobblemon:jolteon",
-    "cobblemon:rayquaza"
+    "cobblemon:rayquaza",
+    "cobblemon:sylveon"
   ],
   "features": [
     "multiverse_roll"

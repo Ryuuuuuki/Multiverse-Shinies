@@ -1,0 +1,15 @@
+{
+  "species": "cobblemon:sylveon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
+      "poser": "cobblemon:sylveon_multiverse",
+      "model": "cobblemon:multiverse_sylveon_male.geo",
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_multiverse_male.png"
+    }
+  ]
+}
