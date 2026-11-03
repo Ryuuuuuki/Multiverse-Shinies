@@ -10,6 +10,14 @@
       "poser": "cobblemon:sylveon_multiverse",
       "model": "cobblemon:multiverse_sylveon_male.geo",
       "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_multiverse_male.png"
+    },
+    {
+      "aspects": [
+        "multiverseshinies",
+        "female"
+      ],
+      "model": "cobblemon:multiverse_sylveon_female.geo",
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_multiverse_female.png"
     }
   ]
 }
