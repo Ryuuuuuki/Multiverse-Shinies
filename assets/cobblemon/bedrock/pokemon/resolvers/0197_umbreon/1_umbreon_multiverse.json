@@ -1,0 +1,22 @@
+{
+  "species": "cobblemon:umbreon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
+      "model": "cobblemon:multiverse_umbreon_male.geo",
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_multiverse_male.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "translucent": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_multiverse_male_emissive.png"
+        }
+      ]
+    }
+  ]
+}
