@@ -17,6 +17,22 @@
           "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive.png"
         }
       ]
+    },
+    {
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
+      "model": "cobblemon:multiverse_espeon_male.geo",
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "translucent": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive.png"
+        }
+      ]
     }
   ]
 }
