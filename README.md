@@ -13,7 +13,7 @@ Addon para o mod [Cobblemon](https://cobblemon.com/) que adiciona variantes **"M
 | Eevee (macho e fêmea) | ✅ | ✅ | ✅ | Funcional |
 | Flareon (macho) — "Diluc" | ✅ | ✅ | ✅ | Funcional (animações do original) |
 | Flareon (fêmea) — "Mavuika" | ✅ | ✅ | ✅ | Funcional (animações do original; pontas do cabelo brilham e óculos translúcidos via camadas) |
-| Jolteon (macho) — "Flins" | ✅ | ✅ | ✅ | Funcional (animações do original; lanterna presa no quadril) |
+| Jolteon (macho) — "Flins" | ✅ | ✅ | ✅ | Funcional (lanterna animada no quadril: balança, chama azul brilha pelo vidro e reage nas batalhas) |
 | Jolteon (fêmea) — "Fischl" | ✅ | ✅ | ✅ | Funcional (animações do original; arco nas costas) |
 | Sylveon (macho) — "Dahlia" | ✅ | ✅ | ✅ | Funcional (livro mágico animado voando em volta; reage nas batalhas) |
 | Vaporeon (fêmea) — "Furina" | ✅ | ✅ | ✅ | Funcional (animações do original) |
@@ -70,6 +70,14 @@ Para testar, invoque um Pokémon já com o resultado do sorteio:
 ```
 
 O Rayquaza "Slifer" tem animações próprias em `animations/0384_rayquaza/multiverse_rayquaza.animation.json` (`ground_idle`, `blink`, `eye_size`, `air_fly` e `air_idle`) e um poser próprio (`posers/0384_rayquaza/rayquaza_multiverse.json`): parado usa `ground_idle`, pairando usa `air_idle` e voando ou nadando usa `air_fly`, em que o corpo e a cauda ondulam para cima e para baixo enquanto as asas batem (o pescoço e a cabeça ficam firmes). A joia azul da testa fica em `rayquaza_multiverse_emissive.png` e brilha no escuro.
+
+### Jolteon "Flins" e a lanterna
+
+O Jolteon "Flins" usa as animações do Jolteon original e ganha animações próprias da lanterna em `animations/0135_jolteon/multiverse_jolteon.animation.json`, com poser próprio (`posers/0135_jolteon/jolteon_multiverse_male.json`):
+
+- A lanterna fica pendurada pela alça (osso `lantern_hang`) e tem uma chama azul própria (`lantern_flame`) dentro do vidro. O vidro é uma camada translúcida (`jolteon_multiverse_male_glass.png`) e a chama brilha no escuro (`jolteon_multiverse_male_emissive.png`).
+- `lantern_idle` (parado) e `lantern_walk` (andando): balanço de pêndulo e chama tremulando.
+- Batalha e grito juntam a expressão do Jolteon com a lanterna: `cry` = susto (tranco e a chama explode), `physical_attack` = golpe com a lanterna, `special_attack` = a chama cresce e estala, `status` = balanço hipnótico com clarão no fim, `faint` = a chama engasga e apaga.
 
 ### Sylveon "Dahlia" e o livro mágico
 

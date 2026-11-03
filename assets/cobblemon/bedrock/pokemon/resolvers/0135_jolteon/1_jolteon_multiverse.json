@@ -16,7 +16,20 @@
         "male"
       ],
       "model": "cobblemon:multiverse_jolteon_male.geo",
-      "texture": "cobblemon:textures/pokemon/0135_jolteon/jolteon_multiverse_male.png"
+      "texture": "cobblemon:textures/pokemon/0135_jolteon/jolteon_multiverse_male.png",
+      "poser": "cobblemon:jolteon_multiverse_male",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0135_jolteon/jolteon_multiverse_male_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "glass",
+          "texture": "cobblemon:textures/pokemon/0135_jolteon/jolteon_multiverse_male_glass.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }
