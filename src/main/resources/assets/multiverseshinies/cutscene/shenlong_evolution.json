@@ -1,0 +1,452 @@
+{
+ "length": 13.2,
+ "scale": 1.05,
+ "note": "positions in model units (Blockbench internal: -z = the dragon's front at spawn, +x = its right), origin = the evolving Pokemon",
+ "portals": [
+  {
+   "center": [
+    -48.762,
+    85.333,
+    -175.238
+   ],
+   "normal": [
+    0.381,
+    -0.3581,
+    0.8524
+   ],
+   "radius": 3.3,
+   "open": 0.0,
+   "close": 3.416
+  },
+  {
+   "center": [
+    44.927,
+    170.714,
+    -117.333
+   ],
+   "normal": [
+    0.3549,
+    0.5533,
+    -0.7536
+   ],
+   "radius": 3.3,
+   "open": 9.407,
+   "close": 12.57
+  }
+ ],
+ "emerge": 1.5,
+ "bones": {
+  "body": [
+   1.825,
+   11.775
+  ],
+  "neck": [
+   1.8,
+   11.7
+  ],
+  "neck2": [
+   1.775,
+   11.7
+  ],
+  "neck3": [
+   1.725,
+   11.675
+  ],
+  "neck4": [
+   1.65,
+   11.625
+  ],
+  "head": [
+   1.525,
+   11.6
+  ],
+  "head_ai": [
+   1.525,
+   11.6
+  ],
+  "head_angle": [
+   1.525,
+   11.6
+  ],
+  "muzzle": [
+   1.525,
+   11.6
+  ],
+  "front_tooth_left": [
+   1.525,
+   11.6
+  ],
+  "front_tooth_right": [
+   1.525,
+   11.6
+  ],
+  "muzzle_left": [
+   1.525,
+   11.6
+  ],
+  "eye_left": [
+   1.525,
+   11.6
+  ],
+  "pupil_left": [
+   1.525,
+   11.6
+  ],
+  "eye_angry_left": [
+   1.525,
+   11.6
+  ],
+  "eye_sad_left": [
+   1.525,
+   11.6
+  ],
+  "eye_unamused_left": [
+   1.525,
+   11.6
+  ],
+  "pupil_left2": [
+   1.525,
+   11.6
+  ],
+  "pupil_closed_left": [
+   1.525,
+   11.6
+  ],
+  "pupil_happy_left": [
+   1.525,
+   11.6
+  ],
+  "muzzle_right": [
+   1.525,
+   11.6
+  ],
+  "eye_right": [
+   1.525,
+   11.6
+  ],
+  "pupil_right": [
+   1.525,
+   11.6
+  ],
+  "eye_angry_right": [
+   1.525,
+   11.6
+  ],
+  "eye_sad_right": [
+   1.525,
+   11.6
+  ],
+  "eye_unamused_right": [
+   1.525,
+   11.6
+  ],
+  "pupil_right2": [
+   1.525,
+   11.6
+  ],
+  "pupil_closed_right": [
+   1.525,
+   11.6
+  ],
+  "pupil_happy_right": [
+   1.525,
+   11.6
+  ],
+  "whisker_left": [
+   1.525,
+   11.6
+  ],
+  "whisker_left2": [
+   1.525,
+   11.6
+  ],
+  "whisker_left3": [
+   1.525,
+   11.6
+  ],
+  "whisker_left4": [
+   1.525,
+   11.6
+  ],
+  "whisker_right": [
+   1.525,
+   11.6
+  ],
+  "whisker_right2": [
+   1.525,
+   11.6
+  ],
+  "whisker_right3": [
+   1.525,
+   11.6
+  ],
+  "whisker_right4": [
+   1.525,
+   11.6
+  ],
+  "jaw": [
+   1.525,
+   11.6
+  ],
+  "jaw_left": [
+   1.525,
+   11.6
+  ],
+  "jaw_right": [
+   1.525,
+   11.6
+  ],
+  "horns": [
+   1.525,
+   11.6
+  ],
+  "horn_top_left": [
+   1.525,
+   11.6
+  ],
+  "horn_bottom_left": [
+   1.525,
+   11.6
+  ],
+  "horn_top_right": [
+   1.525,
+   11.6
+  ],
+  "horn_bottom_right": [
+   1.525,
+   11.6
+  ],
+  "torso": [
+   1.825,
+   11.775
+  ],
+  "segment1": [
+   1.95,
+   11.8
+  ],
+  "segment": [
+   1.95,
+   11.825
+  ],
+  "segment2": [
+   2.025,
+   11.875
+  ],
+  "segment3": [
+   2.1,
+   11.9
+  ],
+  "segment4": [
+   2.125,
+   11.95
+  ],
+  "segment5": [
+   2.225,
+   11.975
+  ],
+  "segment6": [
+   2.225,
+   12.025
+  ],
+  "segment7": [
+   2.3,
+   12.075
+  ],
+  "segment8": [
+   2.375,
+   12.075
+  ],
+  "segment9": [
+   2.4,
+   12.15
+  ],
+  "segment10": [
+   2.5,
+   12.15
+  ],
+  "segment11": [
+   2.525,
+   12.2
+  ],
+  "segment12": [
+   2.6,
+   12.25
+  ],
+  "segment13": [
+   2.675,
+   12.25
+  ],
+  "segment14": [
+   2.7,
+   12.325
+  ],
+  "tail1": [
+   2.825,
+   12.325
+  ],
+  "tail": [
+   2.85,
+   12.375
+  ],
+  "tail2": [
+   2.95,
+   12.425
+  ],
+  "tail3": [
+   3.05,
+   12.45
+  ],
+  "tail_spike_left": [
+   3.05,
+   12.45
+  ],
+  "tail_spike_right": [
+   3.05,
+   12.45
+  ],
+  "tail4": [
+   3.15,
+   12.5
+  ],
+  "arms": [
+   1.825,
+   11.775
+  ],
+  "arm_left": [
+   1.825,
+   11.775
+  ],
+  "arm_left2": [
+   1.825,
+   11.775
+  ],
+  "arm_left3": [
+   1.825,
+   11.775
+  ],
+  "hand_left": [
+   1.825,
+   11.775
+  ],
+  "finger_front_left": [
+   1.825,
+   11.775
+  ],
+  "finger_front_left2": [
+   1.825,
+   11.775
+  ],
+  "finger_middle_left": [
+   1.825,
+   11.775
+  ],
+  "finger_middle_left2": [
+   1.825,
+   11.775
+  ],
+  "finger_back_left": [
+   1.825,
+   11.775
+  ],
+  "finger_back_left2": [
+   1.825,
+   11.775
+  ],
+  "arm_right": [
+   1.825,
+   11.775
+  ],
+  "arm_right2": [
+   1.825,
+   11.775
+  ],
+  "arm_right3": [
+   1.825,
+   11.775
+  ],
+  "hand_right": [
+   1.825,
+   11.775
+  ],
+  "finger_front_right": [
+   1.825,
+   11.775
+  ],
+  "finger_front_right2": [
+   1.825,
+   11.775
+  ],
+  "finger_middle_right": [
+   1.825,
+   11.775
+  ],
+  "finger_middle_right2": [
+   1.825,
+   11.775
+  ],
+  "finger_back_right": [
+   1.825,
+   11.775
+  ],
+  "finger_back_right2": [
+   1.825,
+   11.775
+  ],
+  "dragonball_orbit_1": [
+   1.725,
+   11.675
+  ],
+  "dragonball_1": [
+   1.725,
+   11.675
+  ],
+  "dragonball_orbit_2": [
+   1.95,
+   11.825
+  ],
+  "dragonball_2": [
+   1.95,
+   11.825
+  ],
+  "dragonball_orbit_3": [
+   2.125,
+   11.95
+  ],
+  "dragonball_3": [
+   2.125,
+   11.95
+  ],
+  "dragonball_orbit_4": [
+   2.3,
+   12.075
+  ],
+  "dragonball_4": [
+   2.3,
+   12.075
+  ],
+  "dragonball_orbit_5": [
+   2.4,
+   12.15
+  ],
+  "dragonball_5": [
+   2.4,
+   12.15
+  ],
+  "dragonball_orbit_6": [
+   2.6,
+   12.25
+  ],
+  "dragonball_6": [
+   2.6,
+   12.25
+  ],
+  "dragonball_orbit_7": [
+   2.85,
+   12.375
+  ],
+  "dragonball_7": [
+   2.85,
+   12.375
+  ]
+ }
+}
