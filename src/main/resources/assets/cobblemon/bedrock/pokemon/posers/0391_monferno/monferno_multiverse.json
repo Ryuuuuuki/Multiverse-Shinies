@@ -1,0 +1,72 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [
+    -0.2,
+    0.4,
+    0
+  ],
+  "profileScale": 0.7,
+  "profileTranslation": [
+    0,
+    0.6,
+    0
+  ],
+  "rootBone": "monferno",
+  "animations": {
+    "cry": "q.bedrock_stateful('monferno', 'cry')",
+    "faint": "q.bedrock_stateful('monferno', 'faint')",
+    "multiverse_rage": "q.bedrock_stateful('multiverse_monferno', 'rage')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "HOVER"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('multiverse_monferno', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('monferno', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "HOVER",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('monferno', 'ground_idle')",
+        "q.bedrock('multiverse_monferno', 'pole_hand_hidden')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('monferno', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM",
+        "FLY"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('monferno', 'ground_walk')",
+        "q.bedrock('multiverse_monferno', 'pole_hand_hidden')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('monferno', 'blink')"
+      ]
+    }
+  }
+}

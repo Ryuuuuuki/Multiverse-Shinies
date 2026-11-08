@@ -1,0 +1,29 @@
+{
+  "species": "cobblemon:monferno",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies"
+      ],
+      "poser": "cobblemon:monferno_multiverse",
+      "model": "cobblemon:multiverse_monferno.geo",
+      "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_multiverse.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "translucent": true,
+          "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_multiverse_emissive.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "multiverseshinies",
+        "multiverse_ssj"
+      ],
+      "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_multiverse_ssj.png"
+    }
+  ]
+}

@@ -32,16 +32,20 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The moment the Infernape SSJ4 bursts into the rage (the roar of animation.multiverse_infernape.rage), made of the
- * aura itself: the aura blasts out of him in two expanding shells of the same aura drawings, the aura flares up big and
- * settles, aura rings rush out along the ground, the screen flashes red-orange with a red vignette that lingers, and
- * the camera shakes; the screen part scaled by how close and how in view he is.
+ * The moment a transforming Multiverse Pokemon bursts into the rage (the Infernape's roar, the Monferno's Power Pole
+ * hitting the ground), made of the aura itself: the aura blasts out in two expanding shells of the same aura drawings,
+ * the aura flares up big and settles, aura rings rush out along the ground, the screen flashes with a vignette that
+ * lingers, and the camera shakes; the screen part scaled by how close and how in view it is.
+ * Infernape: red, with a burst of rocks and dust. Monferno (golden): gold, with a storm of lightning instead.
  */
 @EventBusSubscriber(modid = MultiverseShinies.MODID, value = Dist.CLIENT)
 public final class RageBurst {
     private static final ResourceLocation AURA = tex("rage_aura");
     private static final ResourceLocation RING = tex("rage_ring");
     private static final ResourceLocation VIGNETTE = tex("rage_vignette");
+    private static final ResourceLocation AURA_GOLD = tex("rage_aura_gold");
+    private static final ResourceLocation RING_GOLD = tex("rage_ring_gold");
+    private static final float BOLT_TIME = 0.6f;       // the golden burst's lightning storm
     private static final int FRAMES = 16;
     private static final float FPS = 9f;
     private static final float DURATION = 1.8f;        // seconds
@@ -100,7 +104,7 @@ public final class RageBurst {
             raging.add(pe.getId());
             if (!WAS_RAGING.contains(pe.getId())) {
                 START.put(pe.getId(), time);
-                RageAuraRenderer.burstParticles(pe);
+                if (!RageAuraRenderer.isGolden(pe)) RageAuraRenderer.burstParticles(pe);   // rocks and dust
             }
         }
         WAS_RAGING.clear();
@@ -132,12 +136,13 @@ public final class RageBurst {
             int id = pe.getId();
             float h = Math.max(0.5f, pe.getBbHeight());
             Vec3 pos = pe.getPosition(partial);
+            boolean golden = RageAuraRenderer.isGolden(pe);
 
             ps.pushPose();
             ps.translate(pos.x - cam.x, pos.y - cam.y, pos.z - cam.z);
 
             // aura rings rushing out along the ground
-            VertexConsumer ring = buffers.getBuffer(RenderType.entityTranslucentEmissive(RING));
+            VertexConsumer ring = buffers.getBuffer(RenderType.entityTranslucentEmissive(golden ? RING_GOLD : RING));
             int base = Math.floorMod((int) Math.floor(seconds * FPS), FRAMES);
             for (int k = 0; k < 3; k++) {
                 float ra = a - k * 0.12f;
@@ -146,19 +151,27 @@ public final class RageBurst {
                 ground(ring, ps, r, 0.05f + 0.01f * k, (base + 5 * k) % FRAMES, 0.95f * (1f - ra / RING_TIME));
             }
 
-            // the aura blasting out of him: shells of the same aura drawings, blown up and fading
-            double dx = cam.x - pos.x, dz = cam.z - pos.z;
-            ps.mulPose(Axis.YP.rotation((float) Math.atan2(dx, dz)));
-            VertexConsumer aura = buffers.getBuffer(RenderType.entityTranslucentEmissive(AURA));
+            // the aura blasting out of him: the 3D aura blown up and fading, two waves
             for (int k = 0; k < 2; k++) {
                 float sa = a - k * 0.14f;
                 if (sa < 0 || sa > SHELL_TIME) continue;
                 float g = easeOut(sa / SHELL_TIME);
-                float half = 1.28f * h * (1f + 2.4f * g);
-                float cy = h * (0.9f + 0.3f * g);
                 float x = 1f - sa / SHELL_TIME;
-                int frame = Math.floorMod((int) Math.floor(seconds * FPS + 2.7f * k + 1 + (id % 7) * 2.3f), FRAMES);
-                billboard(aura, ps, half, cy, frame, 0.75f * x * x, 0.01f + 0.01f * k);
+                AuraMesh.draw(buffers, ps, (float) (cam.x - pos.x), (float) (cam.y - pos.y), (float) (cam.z - pos.z),
+                    h, 1f + 2.4f * g, 0.85f * x * x, seconds, id * 7 + k, golden, 26);
+            }
+            double dx = cam.x - pos.x, dz = cam.z - pos.z;
+            ps.mulPose(Axis.YP.rotation((float) Math.atan2(dx, dz)));
+            // golden: a storm of big bolts lashing out of him, flickering fast and dying away
+            if (golden && a < BOLT_TIME) {
+                VertexConsumer bolts = buffers.getBuffer(RenderType.lightning());
+                float fade = 1f - a / BOLT_TIME;
+                int slot = (int) Math.floor(a * 30f);
+                for (int k = 0; k < 14; k++) {
+                    if (RageAuraRenderer.hash(id, k, slot) > 0.7f) continue;
+                    RageAuraRenderer.lightning(bolts, ps.last().pose(), h, id * 53 + k * 19 + slot * 211, fade,
+                        1.6f + 0.8f * RageAuraRenderer.hash(id, k, 7), k % 2 == 0 ? 0.45f * h : 0.02f);
+                }
             }
             ps.popPose();
         }
@@ -217,11 +230,13 @@ public final class RageBurst {
         Vec3 look = new Vec3(camera.getLookVector());
         float time = now(level, event.getPartialTick().getGameTimeDeltaPartialTick(false));
         float flash = 0f, vignette = 0f;
+        boolean golden = false;
         for (Map.Entry<Integer, Float> e : START.entrySet()) {
             if (!(level.getEntity(e.getKey()) instanceof PokemonEntity pe)) continue;
             float a = age(e.getKey(), time);
             if (a < 0) continue;
             float ex = exposure(pe, camera.getPosition(), look);
+            if (ex > 0.01f && RageAuraRenderer.isGolden(pe)) golden = true;
             if (a < 0.55f) {
                 float k = a < 0.04f ? a / 0.04f : (float) Math.pow(1f - (a - 0.04f) / 0.51f, 2);
                 flash = Math.max(flash, k * ex);
@@ -233,14 +248,16 @@ public final class RageBurst {
         if (vignette > 0.004f) {
             RenderSystem.enableBlend();
             RenderSystem.defaultBlendFunc();
-            RenderSystem.setShaderColor(190 / 255f, 25 / 255f, 20 / 255f, VIGNETTE_ALPHA * vignette);
+            if (golden) RenderSystem.setShaderColor(215 / 255f, 160 / 255f, 20 / 255f, VIGNETTE_ALPHA * vignette);
+            else RenderSystem.setShaderColor(190 / 255f, 25 / 255f, 20 / 255f, VIGNETTE_ALPHA * vignette);
             g.blit(VIGNETTE, 0, 0, w, h, 0f, 0f, 256, 256, 256, 256);
             RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
             RenderSystem.disableBlend();
         }
         if (flash > 0.004f) {
             int al = Math.round(255 * FLASH_ALPHA * flash);
-            g.fill(0, 0, w, h, (al << 24) | (255 << 16) | (110 << 8) | 70);
+            int rgb = golden ? (255 << 16) | (225 << 8) | 120 : (255 << 16) | (110 << 8) | 70;
+            g.fill(0, 0, w, h, (al << 24) | rgb);
         }
     }
 

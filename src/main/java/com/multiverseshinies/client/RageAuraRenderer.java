@@ -32,14 +32,16 @@ import java.util.Map;
 
 /**
  * Infernape SSJ4 rage aura, drawn every frame like a Dragon-Ball ki aura:
- *  - a big camera-facing (around Y) aura billboard at 45% opacity, key drawings cross-faded ~2 per second;
+ *  - a 3D aura around him (AuraMesh): a teardrop shell with rising light streaks and a rim glow, its top breaking into
+ *    flickering flames, plus flame tongues cut from the hand-drawn aura key drawings;
  *  - ground pulses (rings that grow out and fade);
  *  - wind streaks running outward along the ground;
  *  - short red/white lightning sparks crackling around the aura;
  *  - (client tick) chunks of the block under him and dust thrown outward, embers rising.
- * Shown while: species infernape, aspect multiverseshinies, in battle, and the posable variable
+ * Shown while: a transforming Multiverse Pokemon (RageSpecies) in battle with the posable variable
  * v.multiverse_rage == 1 (set by the mod's boost.json; gone when the Pokemon is recalled), starting only when the
- * rage animation bursts (RageAuraPush.BURST_TICKS after the variable is set). RageBurst adds the burst itself.
+ * rage animation bursts (RageSpecies.burstTicks after the variable is set). RageBurst adds the burst itself.
+ * Golden species (Monferno) get the golden aura and Super Saiyan 2 lightning instead of the ground effects.
  */
 @EventBusSubscriber(modid = MultiverseShinies.MODID, value = Dist.CLIENT)
 public final class RageAuraRenderer {
@@ -47,6 +49,9 @@ public final class RageAuraRenderer {
     private static final ResourceLocation RING = tex("rage_ring");
     private static final ResourceLocation WIND = tex("wind_streak");
     private static final ResourceLocation GLOW = tex("burst_glow");
+    private static final ResourceLocation AURA_GOLD = tex("rage_aura_gold");
+    private static final ResourceLocation RING_GOLD = tex("rage_ring_gold");
+    private static final int GOLD_BOLT_SLOTS = 10;
     private static final int FRAMES = 16;
     private static final float FPS = 9f;
     private static final float AURA_HALF = 1.28f;     // in entity heights
@@ -60,7 +65,7 @@ public final class RageAuraRenderer {
     private static final float FADE_PER_SECOND = 4f;
 
     private static final Map<Integer, Float> FADE = new HashMap<>();
-    /** entity id -> game time the rage variable was first seen on (the boost; the burst comes BURST_TICKS later) */
+    /** entity id -> game time the rage variable was first seen on (the boost; the burst comes burstTicks later) */
     private static final Map<Integer, Long> RAGE_SINCE = new HashMap<>();
     private static long lastNanos = -1;
 
@@ -72,8 +77,8 @@ public final class RageAuraRenderer {
 
     static boolean isRaging(PokemonEntity pe) {
         try {
-            if (!pe.getAspects().contains("multiverseshinies")) return false;
-            if (!"cobblemon:infernape".equals(pe.getPokemon().getSpecies().getResourceIdentifier().toString())) return false;
+            com.multiverseshinies.RageSpecies sp = com.multiverseshinies.RageSpecies.of(pe);
+            if (sp == null) return false;
             if (!(pe.getDelegate() instanceof PosableState state)) return false;
             var env = state.getRuntime().getEnvironment();
             MoValue v = env.getSimpleVariable("multiverse_rage");
@@ -83,7 +88,7 @@ public final class RageAuraRenderer {
             long since = RAGE_SINCE.computeIfAbsent(pe.getId(), k -> now);
             // the variable sticks to the entity: drop it when the boosts are over (battle ended, or, once the
             // server has had time to say so, no stat raised any more: Haze, lowered back to 0...)
-            boolean grace = now - since <= com.multiverseshinies.RageAuraPush.BURST_TICKS + 40;
+            boolean grace = now - since <= sp.burstTicks + 40;
             int id = pe.getId();
             boolean serverEnded = com.multiverseshinies.RageNet.CONFIRMED.contains(id) && !com.multiverseshinies.RageNet.BUFFED.contains(id);
             if (!pe.isBattling() || (!grace && serverEnded)) {
@@ -92,14 +97,14 @@ public final class RageAuraRenderer {
                 com.multiverseshinies.RageNet.CONFIRMED.remove(id);
                 return false;
             }
-            return now - since >= com.multiverseshinies.RageAuraPush.BURST_TICKS;
+            return now - since >= sp.burstTicks;
         } catch (Throwable t) {
             return false;
         }
     }
 
     /** deterministic 0..1 random from a few ints */
-    private static float hash(int a, int b, int c) {
+    static float hash(int a, int b, int c) {
         int h = a * 73856093 ^ b * 19349663 ^ c * 83492791;
         h ^= h >>> 13; h *= 0x5bd1e995; h ^= h >>> 15;
         return (h & 0xFFFFFF) / (float) 0x1000000;
@@ -181,6 +186,7 @@ public final class RageAuraRenderer {
         RandomSource rnd = level.getRandom();
         for (Entity entity : level.entitiesForRendering()) {
             if (!(entity instanceof PokemonEntity pe) || FADE.getOrDefault(pe.getId(), 0f) < 0.5f) continue;
+            if (isGolden(pe)) continue;                       // the golden ones crackle with lightning instead
             float h = Math.max(0.5f, pe.getBbHeight());
             Vec3 p = pe.position();
             BlockState ground = level.getBlockState(BlockPos.containing(p.x, p.y - 0.2, p.z));
@@ -236,16 +242,12 @@ public final class RageAuraRenderer {
                 ps.scale(s, s, s);
                 ps.translate(-0.5, -0.5, -0.5);
                 int light = net.minecraft.client.renderer.LevelRenderer.getLightColor(level, BlockPos.containing(x, y, z));
-                // drawn with an entity render type, not the block's terrain one: shader packs (Iris) expect terrain
-                // types to come from chunk meshes and smear a block drawn with them out here into long twisted spikes
-                net.minecraft.client.resources.model.BakedModel model = mc.getBlockRenderer().getBlockModel(f.block);
-                int color = mc.getBlockColors().getColor(f.block, level, BlockPos.containing(x, y, z), 0);
-                float cr = color == -1 ? 1f : ((color >> 16) & 255) / 255f;
-                float cg = color == -1 ? 1f : ((color >> 8) & 255) / 255f;
-                float cb = color == -1 ? 1f : (color & 255) / 255f;
-                mc.getBlockRenderer().getModelRenderer().renderModel(ps.last(),
-                    buffers.getBuffer(net.minecraft.client.renderer.Sheets.cutoutBlockSheet()), f.block, model, cr, cg, cb,
-                    light, OverlayTexture.NO_OVERLAY, net.neoforged.neoforge.client.model.data.ModelData.EMPTY, null);
+                // a plain cube drawn by hand with the ground block's particle texture: Minecraft's block model renderer,
+                // fed from here mid-frame, smeared some chunks into long twisted spikes (with or without shaders)
+                net.minecraft.client.renderer.texture.TextureAtlasSprite sprite =
+                    mc.getBlockRenderer().getBlockModelShaper().getParticleIcon(f.block);
+                VertexConsumer vc = buffers.getBuffer(RenderType.entityCutoutNoCull(net.minecraft.world.inventory.InventoryMenu.BLOCK_ATLAS));
+                cube(vc, ps.last(), sprite, light);
             } else if (f.type == DUSTP) {
                 ps.mulPose(camRot);
                 ps.mulPose(Axis.ZP.rotationDegrees(f.prot + (f.rot - f.prot) * partial));
@@ -270,6 +272,27 @@ public final class RageAuraRenderer {
                 vertex(vc, pose, m, wid, len * 0.5f, 0, 1, 0, a); vertex(vc, pose, m, -wid, len * 0.5f, 0, 0, 0, a);
             }
             ps.popPose();
+        }
+    }
+
+    private static final float[][][] CUBE = {   // face -> 4 corners (unit cube), normal last
+        {{0, 0, 0}, {1, 0, 0}, {1, 0, 1}, {0, 0, 1}, {0, -1, 0}},
+        {{0, 1, 1}, {1, 1, 1}, {1, 1, 0}, {0, 1, 0}, {0, 1, 0}},
+        {{0, 0, 0}, {0, 1, 0}, {1, 1, 0}, {1, 0, 0}, {0, 0, -1}},
+        {{1, 0, 1}, {1, 1, 1}, {0, 1, 1}, {0, 0, 1}, {0, 0, 1}},
+        {{0, 0, 1}, {0, 1, 1}, {0, 1, 0}, {0, 0, 0}, {-1, 0, 0}},
+        {{1, 0, 0}, {1, 1, 0}, {1, 1, 1}, {1, 0, 1}, {1, 0, 0}},
+    };
+
+    private static void cube(VertexConsumer vc, PoseStack.Pose pose, net.minecraft.client.renderer.texture.TextureAtlasSprite sp, int light) {
+        Matrix4f m = pose.pose();
+        float[][] uv = {{sp.getU0(), sp.getV1()}, {sp.getU0(), sp.getV0()}, {sp.getU1(), sp.getV0()}, {sp.getU1(), sp.getV1()}};
+        for (float[][] face : CUBE) {
+            float[] n = face[4];
+            for (int i = 0; i < 4; i++) {
+                vc.addVertex(m, face[i][0], face[i][1], face[i][2]).setColor(255, 255, 255, 255).setUv(uv[i][0], uv[i][1])
+                  .setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(pose, n[0], n[1], n[2]);
+            }
         }
     }
 
@@ -328,22 +351,23 @@ public final class RageAuraRenderer {
             poseStack.translate(pos.x - cam.x, pos.y - cam.y, pos.z - cam.z);
 
             float boost = RageBurst.auraBoost(id, level.getGameTime() + partial);
+            boolean golden = isGolden(pe);
 
-            // the ground glows red under him (stronger while the aura flares up after the burst)
+            // the ground glows red (gold) under him (stronger while the aura flares up after the burst)
             VertexConsumer glow = buffers.getBuffer(RenderType.entityTranslucentEmissive(GLOW));
-            groundGlow(glow, poseStack, 1.4f * h * boost, 0.02f, fade * 0.43f * Math.min(1f, boost - 0.3f));
+            groundGlow(glow, poseStack, 1.4f * h * boost, 0.02f, fade * 0.43f * Math.min(1f, boost - 0.3f), golden);
 
             // ground pulses
-            VertexConsumer ring = buffers.getBuffer(RenderType.entityTranslucentEmissive(RING));
+            VertexConsumer ring = buffers.getBuffer(RenderType.entityTranslucentEmissive(golden ? RING_GOLD : RING));
             for (int k = 0; k < 2; k++) {
                 float p = (float) ((seconds * PULSES_PER_SECOND + k * 0.5f + (id % 5) * 0.13f) % 1.0);
                 float r = RING_HALF * h * (0.35f + 0.85f * p);
                 groundQuad(ring, poseStack, r, 0.03f + 0.002f * k, a, fade * PULSE_ALPHA * (float) Math.sin(Math.PI * p));
             }
 
-            // wind streaks running outward along the ground
+            // wind streaks running outward along the ground (not for the golden ones: no ground effects)
             VertexConsumer wind = buffers.getBuffer(RenderType.entityTranslucentEmissive(WIND));
-            for (int k = 0; k < WIND_STREAKS; k++) {
+            for (int k = 0; k < (golden ? 0 : WIND_STREAKS); k++) {
                 float speed = 0.9f + 0.6f * hash(id, k, 1);
                 float p = (float) ((seconds * speed + hash(id, k, 2)) % 1.0);
                 int cycle = (int) Math.floor(seconds * speed + hash(id, k, 2));
@@ -354,20 +378,28 @@ public final class RageAuraRenderer {
                 windStreak(wind, poseStack, ang, r0, len, h * 0.045f, 0.06f + 0.05f * hash(id, k, 4) * h, al);
             }
 
-            // the aura itself and the sparks live in the camera-facing frame
+            // the 3D aura around him (world-aligned, from his feet): shell with rim glow + flame tongues
+            AuraMesh.draw(buffers, poseStack, (float) (cam.x - pos.x), (float) (cam.y - pos.y), (float) (cam.z - pos.z),
+                h, boost, fade * Math.min(1f, 0.8f * (float) Math.pow(boost, 1.2)), seconds, id, golden, 16);
+
+            // the sparks live in the camera-facing frame
             double dx = cam.x - pos.x, dz = cam.z - pos.z;
             poseStack.mulPose(Axis.YP.rotation((float) Math.atan2(dx, dz)));
-            VertexConsumer aura = buffers.getBuffer(RenderType.entityTranslucentEmissive(AURA));
-            float half = AURA_HALF * h * boost, cy = AURA_CENTER * h * (0.85f + 0.15f * boost);
-            float alpha = Math.min(0.7f, AURA_ALPHA * (float) Math.pow(boost, 1.5));
-            billboard(aura, poseStack, half, cy, a, fade * alpha);
-            billboard(aura, poseStack, half, cy, b, fade * alpha * w);
 
             VertexConsumer bolts = buffers.getBuffer(RenderType.lightning());
-            for (int k = 0; k < SPARK_SLOTS; k++) {
-                int slot = (int) Math.floor(seconds * 9f + k * 0.37f);
-                if (hash(id, k, slot) > 0.55f) continue;                     // crackles on and off
-                spark(bolts, poseStack, h, id * 31 + k * 7 + slot * 131, fade);
+            if (golden) {
+                // Super Saiyan 2 lightning: bright cyan-white bolts crackling all around him, some in front of his body
+                for (int k = 0; k < GOLD_BOLT_SLOTS; k++) {
+                    int slot = (int) Math.floor(seconds * 12f + k * 0.29f);
+                    if (hash(id, k, slot) > 0.5f) continue;
+                    lightning(bolts, poseStack.last().pose(), h, id * 37 + k * 11 + slot * 173, fade, 1f, k % 2 == 0 ? 0.4f * h : 0.02f);
+                }
+            } else {
+                for (int k = 0; k < SPARK_SLOTS; k++) {
+                    int slot = (int) Math.floor(seconds * 9f + k * 0.37f);
+                    if (hash(id, k, slot) > 0.55f) continue;                     // crackles on and off
+                    spark(bolts, poseStack, h, id * 31 + k * 7 + slot * 131, fade);
+                }
             }
             poseStack.popPose();
         }
@@ -401,14 +433,49 @@ public final class RageAuraRenderer {
         vertex(vc, pose, m, half, y, -half, u1, 0, al);
     }
 
-    private static void groundGlow(VertexConsumer vc, PoseStack ps, float half, float y, float alpha) {
+    static boolean isGolden(PokemonEntity pe) {
+        com.multiverseshinies.RageSpecies sp = com.multiverseshinies.RageSpecies.of(pe);
+        return sp != null && sp.golden;
+    }
+
+    /**
+     * a jagged Super Saiyan 2 lightning bolt (camera-facing frame): a cyan glow with a white-hot core, plus a short
+     * fork. Starts somewhere around his body; `scale` makes it bigger (the burst uses bigger ones).
+     */
+    static void lightning(VertexConsumer vc, Matrix4f m, float h, int seed, float fade, float scale, float z) {
+        java.util.Random r = new java.util.Random(seed);
+        float x = (r.nextFloat() - 0.5f) * h * scale;
+        float y = h * (0.05f + 1.15f * r.nextFloat());
+        float ang = (float) (r.nextFloat() * Math.PI * 2);
+        float dirx = (float) Math.cos(ang), diry = (float) Math.sin(ang);
+        int segs = 5 + r.nextInt(4);
+        float seg = h * (0.05f + 0.05f * r.nextFloat()) * scale;
+        float wide = h * 0.022f * scale, core = h * 0.007f * scale;
+        int ga = Math.round(170 * fade), ca = Math.round(255 * fade);
+        for (int i = 0; i < segs; i++) {
+            float nx = x + (dirx + (r.nextFloat() - 0.5f) * 1.6f) * seg;
+            float ny = y + (diry + (r.nextFloat() - 0.5f) * 1.6f) * seg;
+            float ex = ny - y, ey = -(nx - x);
+            float el = (float) Math.sqrt(ex * ex + ey * ey); if (el < 1e-5f) el = 1;
+            quad(vc, m, x, y, nx, ny, ex / el * wide, ey / el * wide, z, 110, 225, 255, ga);
+            quad(vc, m, x, y, nx, ny, ex / el * core, ey / el * core, z + 0.001f, 240, 252, 255, ca);
+            if (i == segs / 2) {                                    // a little fork
+                float bx = nx + (-diry + (r.nextFloat() - 0.5f)) * seg, by = ny + (dirx + (r.nextFloat() - 0.5f)) * seg;
+                quad(vc, m, nx, ny, bx, by, ex / el * wide * 0.7f, ey / el * wide * 0.7f, z, 110, 225, 255, ga);
+                quad(vc, m, nx, ny, bx, by, ex / el * core, ey / el * core, z + 0.001f, 240, 252, 255, ca);
+            }
+            x = nx; y = ny;
+        }
+    }
+
+    private static void groundGlow(VertexConsumer vc, PoseStack ps, float half, float y, float alpha, boolean golden) {
         if (alpha <= 0.003f) return;
         PoseStack.Pose pose = ps.last();
         Matrix4f m = pose.pose();
         int al = Math.round(alpha * 255);
         float[][] c = {{-half, -half, 0, 0}, {-half, half, 0, 1}, {half, half, 1, 1}, {half, -half, 1, 0}};
         for (float[] q : c) {
-            vc.addVertex(m, q[0], y, q[1]).setColor(255, 70, 40, al).setUv(q[2], q[3])
+            vc.addVertex(m, q[0], y, q[1]).setColor(255, golden ? 190 : 70, golden ? 50 : 40, al).setUv(q[2], q[3])
               .setOverlay(OverlayTexture.NO_OVERLAY).setLight(LightTexture.FULL_BRIGHT).setNormal(pose, 0f, 1f, 0f);
         }
     }

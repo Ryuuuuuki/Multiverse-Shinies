@@ -11,7 +11,7 @@
       "animation": [
         "multiverse_rage"
       ],
-      "entityCondition": "q.entity.is_pokemon && q.entity.has_aspect('multiverseshinies')",
+      "entityCondition": "q.entity.is_pokemon && q.entity.has_aspect('multiverseshinies') && !q.entity.has_aspect('multiverse_raging')",
       "variables": [
         "v.multiverse_rage = 1"
       ]
