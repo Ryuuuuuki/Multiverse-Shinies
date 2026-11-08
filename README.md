@@ -127,7 +127,7 @@ Multiverse Shinies/
 └── blockbench/                          # Arquivos-fonte .bbmodel (não vão no jar)
 ```
 
-A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, com as animações, e Infernape SSJ4 em `infernape_ssj4.bbmodel`), para editar no [Blockbench](https://www.blockbench.net/).
+A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, Infernape SSJ4 em `infernape_ssj4.bbmodel` e Rayquaza "Shenlong" em `rayquaza_shenlong.bbmodel`, todos com as animações), para editar no [Blockbench](https://www.blockbench.net/).
 
 ## Instalação
 
@@ -175,6 +175,13 @@ O Sylveon "Dahlia" usa as animações do Sylveon original e ganha o livro mágic
 - O arquivo também traz as outras expressões do livro (`book_neutral`, `book_happy`, `book_sad`, `book_bored`, `book_mouth_open`, `book_mouth_open_ooo` e as já citadas) para uso futuro.
 
 A Sylveon "Varesa" (fêmea) usa as animações do Sylveon original; as fitas viram as tranças rosa dela e a saia envolve o quadril abrindo para trás. As texturas do Dahlia e da Varesa têm 512×512 (4 texels por unidade nas roupas).
+
+### Rayquaza "Shenlong" (em construção)
+
+Um Rayquaza no visual do Shenlong, feito para a cena de evolução dos Multiverse (ele sai de um portal e dá voltas em volta do Pokémon que está evoluindo). Ainda não aparece no jogo: por enquanto existem o modelo (`multiverse_rayquaza_shenlong.geo.json`), as texturas (`rayquaza_shenlong.png` e a camada brilhante `rayquaza_shenlong_emissive.png`), as animações (`multiverse_rayquaza_shenlong.animation.json`) e o arquivo-fonte `blockbench/rayquaza_shenlong.bbmodel`.
+
+- Corpo verde com escamas, barriga creme em placas com a linha vermelha, crista dentada nas costas, galhadas marrons, tufos de pelo nas bochechas, bigodes compridos e olhos todos vermelhos (brilham no escuro).
+- As sete esferas do dragão (de 1 a 7 estrelas) flutuam em volta do corpo: voando (`air_fly`) giram em espiral em volta dele; paradas (`ground_idle`, `air_idle`) só sobem e descem. Cada uma tem um locator (`locator_dragonball_1` a `_7`) para o rastro de brilho.
 
 ### Mega Slifer (opcional, precisa do Mega Showdown)
 
