@@ -23,8 +23,10 @@ Os modelos, texturas, animações e o sorteio ficam dentro do jar (em `src/main/
 | Vaporeon (fêmea) — "Furina" | ✅ | ✅ | ✅ | Funcional (animações do original) |
 | Vaporeon (macho) — "Neuvillette" | ✅ | ✅ | ✅ | Funcional (animações do original) |
 | Infernape — cosplay de Super Saiyajin 4 | ✅ | ✅ | ✅ | Funcional (animações do original; fogo do cabelo animado; jaqueta de pelo vermelho, faixa, calça de gi, munhequeiras e botas; jubinhas de fogo nos ombros; cabelo que ilumina; voa numa nuvem atrás do treinador; **fúria** com explosão de aura quando recebe buff na batalha) |
+| Chimchar — "Goku criança" | ✅ | ✅ | ✅ | Funcional (animações do original; gi vermelho do Goku criança) |
 | Monferno — cosplay do Goku | ✅ | ✅ | ✅ | Funcional (gi, faixa, munhequeiras, botas e o bastão Nyoibo nas costas; em batalha segura o bastão em pé como na figure, com animação própria; **vira Super Saiyajin** quando recebe buff: bate o bastão no chão, o pelo fica dourado, aura dourada com raios) |
 | Rayquaza — "Slifer, o Dragão Celeste" | ✅ | ✅ | ✅ | Funcional (animações e poser próprios: voo em onda vertical batendo as asas; joia da testa brilha via camada) |
+| Rayquaza — "Shenlong" | ✅ | ✅ | ✅ | Funcional (meio a meio com o Slifer quando vem Multiverse; esferas do dragão em volta; aparece na cena de evolução dos Multiverse) |
 | Mega Rayquaza — "Mega Slifer" | ✅ | ✅ | ✅ | Opcional: só com o [Mega Showdown](https://modrinth.com/project/gUnQILfP) instalado (animações e poser próprios; asas maiores) |
 
 > Os modelos usam somente **box UV**: o carregador de modelos do Cobblemon não aceita UV por face e, se encontrar um, o recarregamento dos recursos falha e o jogo trava.
@@ -73,6 +75,10 @@ A explosão e a aura são desenhadas pelo mod (`RageBurst`, `RageAuraRenderer` e
 **Sons:** o mod registra três sons em `assets/multiverseshinies/sounds.json`: `rage.transform` (no grito, tocado pela própria animação), `rage.aura_loop` (zumbido da aura em loop enquanto ele estiver transformado, entrando baixinho uns 1,7 s depois do grito) e `rage.calm` (quando a fúria acaba com ele ainda em campo). Por padrão eles usam sons do Minecraft; um resource pack pode trocá-los por outros (com `"replace": true` no `sounds.json` do pack).
 
 **Shaders:** os pedaços do chão são desenhados como entidades, e não como blocos de terreno, porque com shaders (Iris) blocos de terreno desenhados fora do chão saem esticados e retorcidos.
+
+### Chimchar "Goku criança"
+
+O Chimchar Multiverse veste o gi do Goku criança: gi vermelho sem manga com o símbolo do Kame no peito e um grande nas costas, faixa preta com as pontas penduradas, munhequeiras azuis, calça larga e sapatos azul-marinho. Só roupa (sem cabelo, sem bastão), com as animações e o poser do Chimchar original (`multiverse_chimchar.geo.json`, `chimchar_multiverse.png`, resolver `resolvers/0390_chimchar/1_chimchar_multiverse.json`). Evoluindo para Monferno, toca a cena do Shenlong.
 
 ### Monferno "Goku": bastão e Super Saiyajin
 
@@ -127,7 +133,7 @@ Multiverse Shinies/
 └── blockbench/                          # Arquivos-fonte .bbmodel (não vão no jar)
 ```
 
-A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, Infernape SSJ4 em `infernape_ssj4.bbmodel` e Rayquaza "Shenlong" em `rayquaza_shenlong.bbmodel`, todos com as animações), para editar no [Blockbench](https://www.blockbench.net/).
+A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Chimchar "Goku criança" em `chimchar_goku.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, Infernape SSJ4 em `infernape_ssj4.bbmodel` e Rayquaza "Shenlong" em `rayquaza_shenlong.bbmodel`, todos com as animações), para editar no [Blockbench](https://www.blockbench.net/).
 
 ## Instalação
 
@@ -146,12 +152,14 @@ Para testar, invoque um Pokémon já com o resultado do sorteio:
 /pokespawn flareon multiverse_roll=multiverseshinies gender=female
 /pokespawn jolteon multiverse_roll=multiverseshinies gender=female
 /pokespawn jolteon multiverse_roll=multiverseshinies gender=male
-/pokespawn rayquaza multiverse_roll=multiverseshinies
+/pokespawn rayquaza multiverse_roll=multiverseshinies multiverse_rayquaza_style=multiverse_classic
+/pokespawn rayquaza multiverse_roll=multiverseshinies multiverse_rayquaza_style=multiverse_shenlong
 /pokespawn sylveon multiverse_roll=multiverseshinies gender=male
 /pokespawn sylveon multiverse_roll=multiverseshinies gender=female
 /pokespawn espeon multiverse_roll=multiverseshinies gender=female
 /pokespawn espeon multiverse_roll=multiverseshinies gender=male
 /pokespawn umbreon multiverse_roll=multiverseshinies gender=male
+/pokespawn chimchar multiverse_roll=multiverseshinies
 /pokespawn monferno multiverse_roll=multiverseshinies
 /pokespawn infernape multiverse_roll=multiverseshinies
 ```
@@ -176,12 +184,22 @@ O Sylveon "Dahlia" usa as animações do Sylveon original e ganha o livro mágic
 
 A Sylveon "Varesa" (fêmea) usa as animações do Sylveon original; as fitas viram as tranças rosa dela e a saia envolve o quadril abrindo para trás. As texturas do Dahlia e da Varesa têm 512×512 (4 texels por unidade nas roupas).
 
-### Rayquaza "Shenlong" (em construção)
+### Rayquaza "Shenlong"
 
-Um Rayquaza no visual do Shenlong, feito para a cena de evolução dos Multiverse (ele sai de um portal e dá voltas em volta do Pokémon que está evoluindo). Ainda não aparece no jogo: por enquanto existem o modelo (`multiverse_rayquaza_shenlong.geo.json`), as texturas (`rayquaza_shenlong.png` e a camada brilhante `rayquaza_shenlong_emissive.png`), as animações (`multiverse_rayquaza_shenlong.animation.json`) e o arquivo-fonte `blockbench/rayquaza_shenlong.bbmodel`.
+Um Rayquaza no visual do Shenlong. Todo Rayquaza sorteia também o traço `multiverse_rayquaza_style` (`multiverse_classic` ou `multiverse_shenlong`, meio a meio); quando ele vem Multiverse, esse traço decide se é o Slifer ou o Shenlong (resolver `resolvers/0384_rayquaza/3_rayquaza_shenlong.json`, ordem 3). O Shenlong não tem mega: com o Mega Showdown ele continua Shenlong.
 
-- Corpo verde com escamas, barriga creme em placas com a linha vermelha, crista dentada nas costas, galhadas marrons, tufos de pelo nas bochechas, bigodes compridos e olhos todos vermelhos (brilham no escuro).
-- As sete esferas do dragão (de 1 a 7 estrelas) flutuam em volta do corpo: voando (`air_fly`) giram em espiral em volta dele; paradas (`ground_idle`, `air_idle`) só sobem e descem. Cada uma tem um locator (`locator_dragonball_1` a `_7`) para o rastro de brilho.
+- Modelo `multiverse_rayquaza_shenlong.geo.json`, texturas `rayquaza_shenlong.png` e `rayquaza_shenlong_emissive.png` (olhos vermelhos brilham no escuro), animações em `multiverse_rayquaza_shenlong.animation.json` e poser `posers/0384_rayquaza/rayquaza_shenlong.json`: parado e andando usa `ground_idle`, pairando usa `air_idle`, voando ou nadando usa `air_fly`.
+- Corpo verde com escamas, barriga creme em placas com a linha vermelha, crista dentada nas costas, galhadas marrons, tufos de pelo nas bochechas, bigodes compridos e olhos todos vermelhos.
+- As sete esferas do dragão (de 1 a 7 estrelas) flutuam em volta do corpo: voando (`air_fly`) giram em espiral; paradas (`ground_idle`, `air_idle`) só sobem e descem. Cada uma tem um locator (`dragonball_1` a `_7`).
+
+### Cena de evolução dos Multiverse
+
+Quando um Pokémon Multiverse evolui, o Shenlong aparece (cena só no cliente, todo mundo por perto vê):
+
+- Um portal surge pequeno com um clarão e raios em volta e cresce; o Shenlong sai dele mergulhando, dá umas 2,75 voltas em espiral em volta do Pokémon e sai por um segundo portal logo depois da troca de forma (11,2 s). O corpo segue o caminho da cabeça, ondulando e inclinando nas curvas; as esferas deixam rastro.
+- Enquanto ele circula, a luz sai do Pokémon e vai crescendo (núcleo brilhante, raios de luz girando, coluna de luz até o céu, brilhos sendo sugados e sinos subindo); na troca de forma, tela branca, ondas de choque, explosão de brilhos e tremor de câmera.
+- O voo é uma animação só (`evolution_cutscene`, no osso `flight`), feita no Blockbench (`blockbench/rayquaza_shenlong.bbmodel`; a cena com portais e o Monferno de referência está em `blockbench/shenlong_evolution_preview.bbmodel`). Os portais e os tempos de cada osso ficam em `assets/multiverseshinies/cutscene/shenlong_evolution.json`.
+- O dragão da cena é um Rayquaza só do cliente, com o aspect `multiverse_shenlong_cutscene` e o poser `rayquaza_shenlong_cutscene.json`. O servidor segura o Pokémon que está evoluindo no lugar durante a cena (`EvolutionLock`).
 
 ### Mega Slifer (opcional, precisa do Mega Showdown)
 
@@ -209,7 +227,7 @@ A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_fem
 
 Ainda não definida, exceto pelos arquivos do Mega Slifer (veja abaixo).
 
-Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) do Jolteon "Flins" (macho), do Sylveon "Dahlia" (macho), da Sylveon "Varesa" (fêmea), da Espeon "Citlali" (fêmea), do Espeon "Kaveh" (macho), do Umbreon "Zhongli" (macho), do Monferno "Goku", do Infernape SSJ4 e do Rayquaza "Slifer" são adaptações dos modelos oficiais do Vaporeon, do Flareon, do Jolteon, do Espeon, do Umbreon, do Sylveon, do Monferno, do Infernape e do Rayquaza do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
+Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) do Jolteon "Flins" (macho), do Sylveon "Dahlia" (macho), da Sylveon "Varesa" (fêmea), da Espeon "Citlali" (fêmea), do Espeon "Kaveh" (macho), do Umbreon "Zhongli" (macho), do Chimchar "Goku criança", do Monferno "Goku", do Infernape SSJ4 e do Rayquaza "Slifer" são adaptações dos modelos oficiais do Vaporeon, do Flareon, do Jolteon, do Espeon, do Umbreon, do Sylveon, do Chimchar, do Monferno, do Infernape e do Rayquaza do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
 
 O Mega Rayquaza "Mega Slifer" (`multiverse_megarayquaza.geo.json`, `multiverse_megarayquaza.animation.json`, `rayquaza_multiverse_mega.png`, `rayquaza_multiverse_mega_emissive.png`, `rayquaza_multiverse_mega.json` e `blockbench/rayquaza_mega_slifer.bbmodel`) é uma adaptação do modelo, da textura e das animações do Mega Rayquaza do mod [Mega Showdown](https://github.com/yajatkaul/CobblemonMegaShowdown), de Yajat Kaul e colaboradores: foram adicionadas asas, a textura foi recolorida e foram criadas animações novas. Esses assets vêm do Mega Showdown e, como manda a [licença do Mega Showdown](https://github.com/yajatkaul/CobblemonMegaShowdown/blob/main/LICENSE.md), esses arquivos são distribuídos sob a licença [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (uso não comercial, com crédito e mesma licença). Este mod não é afiliado ao Mega Showdown.
 

@@ -64,7 +64,7 @@ import java.util.Set;
 @EventBusSubscriber(modid = MultiverseShinies.MODID, value = Dist.CLIENT)
 public final class EvolutionCutscene {
     private static final String MULTIVERSE = "multiverseshinies";
-    static final String SHENLONG_ASPECT = "multiverse_shenlong";
+    static final String SHENLONG_ASPECT = "multiverse_shenlong_cutscene";
     private static final float SCALE_MOD = 0.7f;
 
     private static final ResourceLocation DATA = ResourceLocation.fromNamespaceAndPath(MultiverseShinies.MODID, "cutscene/shenlong_evolution.json");

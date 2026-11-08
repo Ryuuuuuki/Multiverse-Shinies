@@ -1,0 +1,13 @@
+{
+  "type": "choice",
+  "keys": [
+    "multiverse_rayquaza_style"
+  ],
+  "default": "random",
+  "isAspect": true,
+  "aspectFormat": "{{choice}}",
+  "choices": [
+    "multiverse_classic",
+    "multiverse_shenlong"
+  ]
+}

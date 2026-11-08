@@ -3,8 +3,21 @@
   "order": 3,
   "variations": [
     {
-      "aspects": ["multiverse_shenlong"],
+      "aspects": ["multiverseshinies", "multiverse_shenlong"],
       "poser": "cobblemon:rayquaza_shenlong",
+      "model": "cobblemon:multiverse_rayquaza_shenlong.geo",
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shenlong.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shenlong_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["multiverse_shenlong_cutscene"],
+      "poser": "cobblemon:rayquaza_shenlong_cutscene",
       "model": "cobblemon:multiverse_rayquaza_shenlong.geo",
       "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shenlong.png",
       "layers": [

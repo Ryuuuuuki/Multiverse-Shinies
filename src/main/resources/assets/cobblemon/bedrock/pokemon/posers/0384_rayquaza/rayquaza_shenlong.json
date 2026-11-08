@@ -1,34 +1,58 @@
 {
   "portraitScale": 1.11,
-  "portraitTranslation": [
-    -1.66,
-    4.48,
-    0
-  ],
+  "portraitTranslation": [-1.66, 4.48, 0],
   "profileScale": 0.25,
-  "profileTranslation": [
-    0,
-    1.5,
-    -10
-  ],
+  "profileTranslation": [0, 1.5, -10],
   "rootBone": "rayquaza",
   "animations": {},
   "poses": {
-    "flying": {
-      "poseTypes": [
-        "FLY",
-        "SWIM",
-        "HOVER",
-        "FLOAT",
-        "STAND",
-        "WALK",
-        "NONE",
-        "SLEEP",
-        "PORTRAIT",
-        "PROFILE"
-      ],
+    "battle-standing": {
+      "poseTypes": ["STAND", "NONE"],
+      "isBattle": true,
       "animations": [
-        "q.bedrock('multiverse_rayquaza_shenlong', 'evolution_cutscene')"
+        "q.look('head_ai')",
+        "q.bedrock('multiverse_rayquaza_shenlong', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('multiverse_rayquaza_shenlong', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('multiverse_rayquaza_shenlong', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"
+      ]
+    },
+    "hovering": {
+      "poseTypes": ["HOVER", "FLOAT"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('multiverse_rayquaza_shenlong', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseTypes": ["FLY", "SWIM"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('multiverse_rayquaza_shenlong', 'air_fly')"
       ],
       "quirks": [
         "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"

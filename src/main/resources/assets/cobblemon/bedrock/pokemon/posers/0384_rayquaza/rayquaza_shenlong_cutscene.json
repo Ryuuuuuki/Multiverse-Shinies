@@ -1,0 +1,38 @@
+{
+  "portraitScale": 1.11,
+  "portraitTranslation": [
+    -1.66,
+    4.48,
+    0
+  ],
+  "profileScale": 0.25,
+  "profileTranslation": [
+    0,
+    1.5,
+    -10
+  ],
+  "rootBone": "rayquaza",
+  "animations": {},
+  "poses": {
+    "flying": {
+      "poseTypes": [
+        "FLY",
+        "SWIM",
+        "HOVER",
+        "FLOAT",
+        "STAND",
+        "WALK",
+        "NONE",
+        "SLEEP",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.bedrock('multiverse_rayquaza_shenlong', 'evolution_cutscene')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('multiverse_rayquaza_shenlong', 'blink')"
+      ]
+    }
+  }
+}

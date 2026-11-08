@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:chimchar",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["multiverseshinies"],
+      "model": "cobblemon:multiverse_chimchar.geo",
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_multiverse.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_multiverse_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}
