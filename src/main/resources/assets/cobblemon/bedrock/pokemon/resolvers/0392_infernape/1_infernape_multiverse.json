@@ -1,0 +1,37 @@
+{
+  "species": "cobblemon:infernape",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "multiverseshinies"
+      ],
+      "poser": "cobblemon:infernape_multiverse",
+      "model": "cobblemon:multiverse_infernape.geo",
+      "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "translucent": true,
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame1.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame2.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame3.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame4.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame5.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame6.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame7.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame8.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame9.png",
+              "cobblemon:textures/pokemon/0392_infernape/infernape_multiverse_flame10.png"
+            ],
+            "fps": 10,
+            "loop": true
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "timeline": [
+    {
+      "holds": [
+        "effects"
+      ],
+      "type": "add_holds"
+    },
+    {
+      "type": "animation",
+      "animation": [
+        "multiverse_rage"
+      ],
+      "entityCondition": "q.entity.is_pokemon && q.entity.has_aspect('multiverseshinies')",
+      "variables": [
+        "v.multiverse_rage = 1"
+      ]
+    },
+    {
+      "delay": 0.1,
+      "effect": "cobblemon:statup_actor",
+      "locators": [
+        "root"
+      ],
+      "type": "entity_particles"
+    },
+    {
+      "pause": 0.75,
+      "type": "pause"
+    },
+    {
+      "holds": [
+        "effects"
+      ],
+      "type": "remove_holds"
+    },
+    {
+      "pause": 1.8,
+      "type": "pause"
+    }
+  ]
+}

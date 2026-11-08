@@ -1,0 +1,132 @@
+{
+  "portraitScale": 1.8,
+  "portraitTranslation": [
+    -0.65,
+    1.55,
+    0
+  ],
+  "profileScale": 0.5,
+  "profileTranslation": [
+    0,
+    1,
+    0
+  ],
+  "rootBone": "infernape",
+  "animations": {
+    "cry": "q.bedrock_stateful('infernape', 'cry')",
+    "faint": "q.bedrock_stateful('infernape', 'faint')",
+    "multiverse_rage": "q.bedrock_stateful('multiverse_infernape', 'rage')"
+  },
+  "poses": {
+    "flying_fast": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "WALK",
+        "SWIM",
+        "FLY",
+        "HOVER",
+        "FLOAT"
+      ],
+      "condition": "v.multiverse_flying == 1 && v.multiverse_running == 1",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('infernape', 'ground_idle')",
+        "q.bedrock('multiverse_infernape', 'cloud_fly_fast')",
+        {
+          "animation": "q.bedrock('multiverse_infernape', 'rage_hidden')",
+          "condition": "v.multiverse_rage_on != 1"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('infernape', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "WALK",
+        "SWIM",
+        "FLY",
+        "HOVER",
+        "FLOAT"
+      ],
+      "condition": "v.multiverse_flying == 1",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('infernape', 'ground_idle')",
+        "q.bedrock('multiverse_infernape', 'cloud_fly')",
+        {
+          "animation": "q.bedrock('multiverse_infernape', 'rage_hidden')",
+          "condition": "v.multiverse_rage_on != 1"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('infernape', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "HOVER",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('infernape', 'ground_idle')",
+        {
+          "animation": "q.bedrock('multiverse_infernape', 'rage_hidden')",
+          "condition": "v.multiverse_rage_on != 1"
+        },
+        "q.bedrock('multiverse_infernape', 'nimbus_hidden')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('infernape', 'blink')"
+      ]
+    },
+    "running": {
+      "poseTypes": [
+        "WALK",
+        "SWIM",
+        "FLY"
+      ],
+      "condition": "v.multiverse_running == 1",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('infernape', 'ground_idle')",
+        "q.bedrock('multiverse_infernape', 'cloud_run')",
+        {
+          "animation": "q.bedrock('multiverse_infernape', 'rage_hidden')",
+          "condition": "v.multiverse_rage_on != 1"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('infernape', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM",
+        "FLY"
+      ],
+      "condition": "v.multiverse_running != 1",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('infernape', 'ground_idle')",
+        "q.bedrock('multiverse_infernape', 'cloud_walk')",
+        {
+          "animation": "q.bedrock('multiverse_infernape', 'rage_hidden')",
+          "condition": "v.multiverse_rage_on != 1"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('infernape', 'blink')"
+      ]
+    }
+  }
+}
