@@ -5,7 +5,7 @@
    "description": {
     "identifier": "geometry.multiverse_umbreon_male",
     "texture_width": 128,
-    "texture_height": 128,
+    "texture_height": 192,
     "visible_bounds_width": 4.0,
     "visible_bounds_height": 3.5,
     "visible_bounds_offset": [
@@ -63,6 +63,142 @@
       -0.25
      ],
      "parent": "umbreon"
+    },
+    {
+     "name": "geo_orbit",
+     "parent": "body",
+     "pivot": [
+      0,
+      15.0,
+      -1.5
+     ]
+    },
+    {
+     "name": "geo_crystal_3",
+     "parent": "geo_orbit",
+     "pivot": [
+      13.8564,
+      18.0,
+      -9.5
+     ],
+     "rotation": [
+      18,
+      45,
+      14
+     ],
+     "cubes": [
+      {
+       "origin": [
+        12.856406460551014,
+        16.0,
+        -10.500000000000007
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "uv": [
+        75,
+        100
+       ],
+       "inflate": -0.1
+      }
+     ]
+    },
+    {
+     "name": "geo_crystal_2",
+     "parent": "geo_orbit",
+     "pivot": [
+      -13.8564,
+      14.0,
+      -9.5
+     ],
+     "rotation": [
+      18,
+      45,
+      14
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -14.856406460551018,
+        12.0,
+        -10.500000000000002
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "uv": [
+        66,
+        100
+       ],
+       "inflate": -0.1
+      }
+     ]
+    },
+    {
+     "name": "geo_crystal_1",
+     "parent": "geo_orbit",
+     "pivot": [
+      0.0,
+      16.5,
+      14.5
+     ],
+     "rotation": [
+      18,
+      45,
+      14
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -0.999999999999999,
+        14.5,
+        13.5
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "uv": [
+        57,
+        100
+       ],
+       "inflate": -0.1
+      }
+     ]
+    },
+    {
+     "name": "jade_shield",
+     "parent": "body",
+     "pivot": [
+      0,
+      14.0,
+      -1.5
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -6,
+        3.0,
+        -9.5
+       ],
+       "size": [
+        12,
+        22,
+        16
+       ],
+       "uv": [
+        0,
+        100
+       ],
+       "inflate": 6.0
+      }
+     ]
     },
     {
      "name": "locator_target",

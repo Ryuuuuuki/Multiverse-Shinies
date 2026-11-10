@@ -15,7 +15,8 @@ Os modelos, texturas, animações e o sorteio ficam dentro do jar (em `src/main/
 | Flareon (fêmea) — "Mavuika" | ✅ | ✅ | ✅ | Funcional (animações do original; pontas do cabelo brilham e óculos translúcidos via camadas) |
 | Jolteon (macho) — "Flins" | ✅ | ✅ | ✅ | Funcional (lanterna animada no quadril: balança, chama azul brilha pelo vidro e reage nas batalhas) |
 | Jolteon (fêmea) — "Fischl" | ✅ | ✅ | ✅ | Funcional (animações do original; arco nas costas) |
-| Umbreon (macho) — "Zhongli" | ✅ | ✅ | ✅ | Funcional (animações do original; anéis vermelhos e gemas Geo brilham via camada) |
+| Umbreon (macho) — "Zhongli" | ✅ | ✅ | ✅ | Funcional (poser próprio: três cristais Geo orbitam em volta dele o tempo todo; em batalha ergue o Escudo de Jade, uma casca dourada translúcida com treliça animada (arte gerada no PixelLab) que gira devagar; no cry os cristais giram, sobem e descem num impacto e o escudo pulsa; anéis, gemas, cristais e escudo brilham via camada animada) |
+| Umbreon (fêmea) — "Hu Tao" | ✅ | ✅ | ✅ | Funcional (poser próprio: o fantasminha Boo Tao flutua do lado dela e três borboletas de fogo rondam o casaco; no cry o Boo Tao gira no ar e o chapéu pula; anéis, flores, Boo Tao e borboletas brilham e pulsam via camada animada) |
 | Espeon (macho) — "Kaveh" | ✅ | ✅ | ✅ | Funcional (animações do original; capa em duas faixas, Visão Dendro e gemas brilham via camada) |
 | Espeon (fêmea) — "Citlali" | ✅ | ✅ | ✅ | Funcional (animações do original; anéis flutuando atrás das orelhas, saia longa; joia da testa brilha via camada) |
 | Sylveon (fêmea) — "Varesa" | ✅ | ✅ | ✅ | Funcional (animações do original; tranças nas fitas, chifres, saia e polainas) |
@@ -35,7 +36,7 @@ Os modelos, texturas, animações e o sorteio ficam dentro do jar (em `src/main/
 
 1. **Sorteio:** `data/cobblemon/species_features/multiverse_roll.json` é uma feature do tipo `choice` com `"default": "random"`. Toda vez que o Cobblemon cria um Pokémon dessas espécies (spawn natural, spawn de outros mods, comando sem a propriedade), ele sorteia um item da lista `choices`: 511 vezes `multiverse_none` e 1 vez `multiverseshinies`, ou seja, **1 chance em 512**.
 2. **Atribuição:** `data/cobblemon/species_feature_assignments/multiverse_roll.json` liga o sorteio às espécies (Magikarp, Gyarados, Eevee, Vaporeon, Flareon, Jolteon, Espeon, Umbreon, Sylveon, Monferno, Infernape e Rayquaza). O resultado fica salvo no Pokémon e acompanha a evolução entre essas espécies.
-3. **Visual:** quando o sorteio dá `multiverseshinies`, o Pokémon ganha esse aspect e os resolvers em `assets/cobblemon/bedrock/pokemon/resolvers/` trocam a textura e o modelo. Onde há duas versões, o gênero decide: Vaporeon fêmea = Furina, macho = Neuvillette; Flareon fêmea = Mavuika, macho = Diluc; Jolteon fêmea = Fischl, macho = Flins; Sylveon fêmea = Varesa, macho = Dahlia; Espeon fêmea = Citlali, macho = Kaveh; Umbreon macho = Zhongli (a fêmea ainda não tem variante). O Infernape (macho ou fêmea) veste o cosplay de Super Saiyajin 4. O Rayquaza vira o Slifer, o Dragão Celeste, e, se o mod Mega Showdown estiver instalado, o Slifer que mega evolui vira o Mega Slifer.
+3. **Visual:** quando o sorteio dá `multiverseshinies`, o Pokémon ganha esse aspect e os resolvers em `assets/cobblemon/bedrock/pokemon/resolvers/` trocam a textura e o modelo. Onde há duas versões, o gênero decide: Vaporeon fêmea = Furina, macho = Neuvillette; Flareon fêmea = Mavuika, macho = Diluc; Jolteon fêmea = Fischl, macho = Flins; Sylveon fêmea = Varesa, macho = Dahlia; Espeon fêmea = Citlali, macho = Kaveh; Umbreon fêmea = Hu Tao, macho = Zhongli. O Infernape (macho ou fêmea) veste o cosplay de Super Saiyajin 4. O Rayquaza vira o Slifer, o Dragão Celeste, e, se o mod Mega Showdown estiver instalado, o Slifer que mega evolui vira o Mega Slifer.
 
 Não existe spawn próprio: os Pokémon aparecem onde o Cobblemon (ou outro mod) já os coloca. Para mudar a chance, ajuste quantas vezes `multiverse_none` aparece na lista `choices` (por exemplo, 1023 vezes = 1 em 1024).
 
@@ -133,7 +134,7 @@ Multiverse Shinies/
 └── blockbench/                          # Arquivos-fonte .bbmodel (não vão no jar)
 ```
 
-A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Chimchar "Goku criança" em `chimchar_goku.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, Infernape SSJ4 em `infernape_ssj4.bbmodel` e Rayquaza "Shenlong" em `rayquaza_shenlong.bbmodel`, todos com as animações), para editar no [Blockbench](https://www.blockbench.net/).
+A pasta `blockbench/` guarda os arquivos-fonte `.bbmodel` dos modelos customizados (Rayquaza "Slifer" em `rayquaza_slifer.bbmodel` e "Mega Slifer" em `rayquaza_mega_slifer.bbmodel`, ambos com as animações; Vaporeon "Furina", Vaporeon "Neuvillette", Flareon "Diluc", Flareon "Mavuika", Jolteon "Fischl", Jolteon "Flins", Sylveon "Dahlia" em `sylveon_dahlia_male.bbmodel`, com as animações, Sylveon "Varesa" em `sylveon_varesa_female.bbmodel`, Espeon "Citlali" em `espeon_citlali_female.bbmodel`, Espeon "Kaveh" em `espeon_kaveh_male.bbmodel`, Umbreon "Zhongli" em `umbreon_zhongli_male.bbmodel`, Umbreon "Hu Tao" em `umbreon_hutao_female.bbmodel`, Chimchar "Goku criança" em `chimchar_goku.bbmodel`, Monferno "Goku" em `monferno_goku.bbmodel`, Infernape SSJ4 em `infernape_ssj4.bbmodel` e Rayquaza "Shenlong" em `rayquaza_shenlong.bbmodel`, todos com as animações), para editar no [Blockbench](https://www.blockbench.net/).
 
 ## Instalação
 
@@ -158,6 +159,7 @@ Para testar, invoque um Pokémon já com o resultado do sorteio:
 /pokespawn sylveon multiverse_roll=multiverseshinies gender=female
 /pokespawn espeon multiverse_roll=multiverseshinies gender=female
 /pokespawn espeon multiverse_roll=multiverseshinies gender=male
+/pokespawn umbreon multiverse_roll=multiverseshinies gender=female
 /pokespawn umbreon multiverse_roll=multiverseshinies gender=male
 /pokespawn chimchar multiverse_roll=multiverseshinies
 /pokespawn monferno multiverse_roll=multiverseshinies
@@ -212,7 +214,7 @@ A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_fem
 ## Problemas conhecidos
 
 - O Cobblemon não faz Rayquaza nascer sozinho; o Rayquaza Multiverse só aparece se outro mod (ou um comando) criar um Rayquaza.
-- As outras evoluções do Eevee (Leafeon e Glaceon) e a Umbreon fêmea ainda não têm variante.
+- As outras evoluções do Eevee (Leafeon e Glaceon) ainda não têm variante.
 
 ## Próximas atualizações
 
@@ -227,7 +229,7 @@ A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_fem
 
 Ainda não definida, exceto pelos arquivos do Mega Slifer (veja abaixo).
 
-Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) do Jolteon "Flins" (macho), do Sylveon "Dahlia" (macho), da Sylveon "Varesa" (fêmea), da Espeon "Citlali" (fêmea), do Espeon "Kaveh" (macho), do Umbreon "Zhongli" (macho), do Chimchar "Goku criança", do Monferno "Goku", do Infernape SSJ4 e do Rayquaza "Slifer" são adaptações dos modelos oficiais do Vaporeon, do Flareon, do Jolteon, do Espeon, do Umbreon, do Sylveon, do Chimchar, do Monferno, do Infernape e do Rayquaza do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
+Os modelos do Vaporeon "Furina" (fêmea), do Vaporeon "Neuvillette" (macho), do Flareon "Diluc" (macho) da Flareon "Mavuika" (fêmea) da Jolteon "Fischl" (fêmea) do Jolteon "Flins" (macho), do Sylveon "Dahlia" (macho), da Sylveon "Varesa" (fêmea), da Espeon "Citlali" (fêmea), do Espeon "Kaveh" (macho), do Umbreon "Zhongli" (macho), da Umbreon "Hu Tao" (fêmea), do Chimchar "Goku criança", do Monferno "Goku", do Infernape SSJ4 e do Rayquaza "Slifer" são adaptações dos modelos oficiais do Vaporeon, do Flareon, do Jolteon, do Espeon, do Umbreon, do Sylveon, do Chimchar, do Monferno, do Infernape e do Rayquaza do [cobblemon-assets](https://gitlab.com/cable-mc/cobblemon-assets) (licença Creative Commons, uso não comercial): foram adicionadas roupas e acessórios, e as texturas foram recoloridas. Os créditos do modelo original são dos autores do Cobblemon.
 
 O Mega Rayquaza "Mega Slifer" (`multiverse_megarayquaza.geo.json`, `multiverse_megarayquaza.animation.json`, `rayquaza_multiverse_mega.png`, `rayquaza_multiverse_mega_emissive.png`, `rayquaza_multiverse_mega.json` e `blockbench/rayquaza_mega_slifer.bbmodel`) é uma adaptação do modelo, da textura e das animações do Mega Rayquaza do mod [Mega Showdown](https://github.com/yajatkaul/CobblemonMegaShowdown), de Yajat Kaul e colaboradores: foram adicionadas asas, a textura foi recolorida e foram criadas animações novas. Esses assets vêm do Mega Showdown e, como manda a [licença do Mega Showdown](https://github.com/yajatkaul/CobblemonMegaShowdown/blob/main/LICENSE.md), esses arquivos são distribuídos sob a licença [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (uso não comercial, com crédito e mesma licença). Este mod não é afiliado ao Mega Showdown.
 

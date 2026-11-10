@@ -1,0 +1,72 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('multiverse_umbreon_male', 'cry')"
+  },
+  "portraitScale": 2.18,
+  "portraitTranslation": [
+    -0.71,
+    0.13,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('umbreon', 'ground_idle')",
+        "q.bedrock('multiverse_umbreon_male', 'geo')",
+        "q.bedrock('multiverse_umbreon_male', 'jade_shield')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('umbreon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('umbreon', 'ground_idle')",
+        "q.bedrock('multiverse_umbreon_male', 'geo')",
+        "q.bedrock('multiverse_umbreon_male', 'shield_hidden')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('umbreon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('umbreon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_umbreon_male', 'geo')",
+        "q.bedrock('multiverse_umbreon_male', 'shield_hidden')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('umbreon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.8,
+  "profileTranslation": [
+    0,
+    0.55,
+    0
+  ],
+  "rootBone": "umbreon"
+}

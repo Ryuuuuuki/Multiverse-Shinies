@@ -1,0 +1,478 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.multiverse_umbreon_female.spirits": {
+   "loop": true,
+   "animation_length": 4.0,
+   "bones": {
+    "boo_tao": {
+     "position": [
+      "math.sin(q.anim_time * 90) * 0.35",
+      "math.sin(q.anim_time * 180) * 0.8",
+      "math.sin(q.anim_time * 90 + 90) * 0.4"
+     ],
+     "rotation": [
+      "math.sin(q.anim_time * 180 + 60) * 4",
+      "math.sin(q.anim_time * 90) * 16",
+      "math.sin(q.anim_time * 180) * 6"
+     ]
+    },
+    "boo_tao_tail": {
+     "rotation": [
+      "math.sin(q.anim_time * 180 + 90) * 14",
+      "math.sin(q.anim_time * 90) * 10",
+      "math.sin(q.anim_time * 180) * 18"
+     ]
+    },
+    "butterfly_1": {
+     "position": [
+      "math.sin(q.anim_time * 90) * 1.4",
+      "math.sin(q.anim_time * 180 + 40) * 1.0",
+      "math.sin(q.anim_time * 90 + 90) * 1.2"
+     ],
+     "rotation": [
+      "math.sin(q.anim_time * 180) * 8",
+      "math.sin(q.anim_time * 90) * 25",
+      0
+     ]
+    },
+    "butterfly_1_wing_left": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080) * 38"
+     ]
+    },
+    "butterfly_1_wing_right": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080) * -38"
+     ]
+    },
+    "butterfly_2": {
+     "position": [
+      "math.sin(q.anim_time * 90 + 120) * 1.4",
+      "math.sin(q.anim_time * 180 + 160) * 1.0",
+      "math.sin(q.anim_time * 90 + 210) * 1.2"
+     ],
+     "rotation": [
+      "math.sin(q.anim_time * 180 + 120) * 8",
+      "math.sin(q.anim_time * 90 + 120) * 25",
+      0
+     ]
+    },
+    "butterfly_2_wing_left": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080 + 120) * 38"
+     ]
+    },
+    "butterfly_2_wing_right": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080 + 120) * -38"
+     ]
+    },
+    "butterfly_3": {
+     "position": [
+      "math.sin(q.anim_time * 90 + 240) * 1.4",
+      "math.sin(q.anim_time * 180 + 280) * 1.0",
+      "math.sin(q.anim_time * 90 + 330) * 1.2"
+     ],
+     "rotation": [
+      "math.sin(q.anim_time * 180 + 240) * 8",
+      "math.sin(q.anim_time * 90 + 240) * 25",
+      0
+     ]
+    },
+    "butterfly_3_wing_left": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080 + 240) * 38"
+     ]
+    },
+    "butterfly_3_wing_right": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(q.anim_time * 1080 + 240) * -38"
+     ]
+    }
+   }
+  },
+  "animation.multiverse_umbreon_female.cry": {
+   "animation_length": 1.2,
+   "bones": {
+    "boo_tao": {
+     "position": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.25": {
+       "post": [
+        0,
+        2.6,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.55": {
+       "post": [
+        0,
+        0.4,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.8": {
+       "post": [
+        0,
+        1.0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     },
+     "rotation": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "linear"
+      },
+      "0.15": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "linear"
+      },
+      "0.7": {
+       "post": [
+        0,
+        360,
+        0
+       ],
+       "lerp_mode": "linear"
+      },
+      "1.1": {
+       "post": [
+        0,
+        360,
+        0
+       ],
+       "lerp_mode": "linear"
+      }
+     },
+     "scale": {
+      "0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.25": {
+       "post": [
+        1.3,
+        1.3,
+        1.3
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": {
+       "post": [
+        0.95,
+        0.95,
+        0.95
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.9": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "hat": {
+     "position": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.12": {
+       "post": [
+        0,
+        0.9,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.45": {
+       "post": [
+        0,
+        0.4,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     },
+     "rotation": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.15": {
+       "post": [
+        -6,
+        0,
+        9
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.35": {
+       "post": [
+        3,
+        0,
+        -6
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.55": {
+       "post": [
+        0,
+        0,
+        3
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.8": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "butterfly_1": {
+     "position": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        0,
+        2.5,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     },
+     "scale": {
+      "0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        1.35,
+        1.35,
+        1.35
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "butterfly_2": {
+     "position": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.38": {
+       "post": [
+        0,
+        2.5,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     },
+     "scale": {
+      "0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.38": {
+       "post": [
+        1.35,
+        1.35,
+        1.35
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "butterfly_3": {
+     "position": {
+      "0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.45999999999999996": {
+       "post": [
+        0,
+        2.5,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     },
+     "scale": {
+      "0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.45999999999999996": {
+       "post": [
+        1.35,
+        1.35,
+        1.35
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.1": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    }
+   },
+   "sound_effects": {
+    "0.04": {
+     "effect": "pokemon.umbreon.cry"
+    }
+   }
+  }
+ }
+}
