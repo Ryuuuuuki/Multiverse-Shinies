@@ -3,19 +3,78 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["multiverseshinies", "male"],
+      "aspects": [
+        "multiverseshinies",
+        "male"
+      ],
+      "poser": "cobblemon:flareon_multiverse_male",
       "model": "cobblemon:multiverse_flareon.geo",
-      "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse.png"
+      "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "translucent": true,
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive1.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive2.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive3.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive4.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive5.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive6.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive7.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive8.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive9.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive10.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive11.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive12.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive13.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive14.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive15.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_emissive16.png"
+            ],
+            "fps": 8,
+            "loop": true
+          }
+        }
+      ]
     },
     {
-      "aspects": ["multiverseshinies", "female"],
+      "aspects": [
+        "multiverseshinies",
+        "female"
+      ],
+      "poser": "cobblemon:flareon_multiverse_female",
       "model": "cobblemon:multiverse_flareon_female.geo",
       "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female.png",
       "layers": [
         {
           "name": "emissive",
-          "texture": "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive.png",
-          "emissive": true
+          "emissive": true,
+          "translucent": true,
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive1.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive2.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive3.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive4.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive5.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive6.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive7.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive8.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive9.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive10.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive11.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive12.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive13.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive14.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive15.png",
+              "cobblemon:textures/pokemon/0136_flareon/flareon_multiverse_female_emissive16.png"
+            ],
+            "fps": 8,
+            "loop": true
+          }
         },
         {
           "name": "lenses",

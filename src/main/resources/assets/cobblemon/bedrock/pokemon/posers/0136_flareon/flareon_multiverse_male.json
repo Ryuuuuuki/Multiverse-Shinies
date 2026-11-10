@@ -1,0 +1,107 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('flareon', 'cry')",
+    "armorcannon": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "bitterblade": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "blastburn": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "blazekick": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "blueflare": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "burningjealousy": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "ember": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "eruption": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "fierydance": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "fireblast": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "firefang": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "firelash": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "firepledge": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "firepunch": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "firespin": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "flameburst": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "flamecharge": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "flamewheel": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "flamethrower": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "flareblitz": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "fusionflare": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "heatcrash": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "heatwave": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "hiddenpowerfire": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "incinerate": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "inferno": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "lavaplume": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "magmastorm": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "mindblown": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "mysticalfire": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "overheat": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "pyroball": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "ragingfury": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "sacredfire": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "searingshot": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "shelltrap": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "temperflare": "q.bedrock_stateful('multiverse_flareon', 'signature')",
+    "torchsong": "q.bedrock_stateful('multiverse_flareon', 'signature')"
+  },
+  "portraitScale": 2.16,
+  "portraitTranslation": [
+    -0.85,
+    -0.28,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('flareon', 'ground_idle')",
+        "q.bedrock('multiverse_flareon', 'embers_battle')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flareon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('flareon', 'ground_idle')",
+        "q.bedrock('multiverse_flareon', 'embers')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flareon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('flareon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_flareon', 'embers')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flareon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.8,
+  "profileTranslation": [
+    0,
+    0.55,
+    0
+  ],
+  "rootBone": "flareon"
+}

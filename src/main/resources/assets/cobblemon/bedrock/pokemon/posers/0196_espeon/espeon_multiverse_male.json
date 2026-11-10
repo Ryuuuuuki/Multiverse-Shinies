@@ -1,0 +1,141 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('espeon', 'cry')",
+    "absorb": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "appleacid": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "branchpoke": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "bulletseed": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "chloroblast": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "drumbeating": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "energyball": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "flowertrick": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "frenzyplant": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "gigadrain": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "grassknot": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "grasspledge": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "grassyglide": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "gravapple": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "hiddenpowergrass": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "hornleech": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "ivycudgel": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "leafage": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "leafblade": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "leafstorm": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "leaftornado": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "magicalleaf": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "matchagotcha": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "megadrain": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "needlearm": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "petalblizzard": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "petaldance": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "powerwhip": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "razorleaf": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "seedbomb": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "seedflare": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "snaptrap": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "solarbeam": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "solarblade": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "syrupbomb": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "trailblaze": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "tropkick": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "vinewhip": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "woodhammer": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "confusion": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "dreameater": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "eeriespell": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "esperwing": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "expandingforce": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "extrasensory": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "freezingglare": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "futuresight": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "heartstamp": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "hiddenpowerpsychic": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "hyperspacehole": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "luminacrash": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "lusterpurge": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "mirrorcoat": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "mistball": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "mysticalpower": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "photongeyser": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "prismaticlaser": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psybeam": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psyblade": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psychic": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psychicfangs": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psychicnoise": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psychoboost": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psychocut": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psyshieldbash": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psyshock": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psystrike": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "psywave": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "storedpower": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "synchronoise": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "twinbeam": "q.bedrock_stateful('multiverse_espeon_male', 'signature')",
+    "zenheadbutt": "q.bedrock_stateful('multiverse_espeon_male', 'signature')"
+  },
+  "portraitScale": 2.14,
+  "portraitTranslation": [
+    -0.68,
+    0.25,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.bedrock('multiverse_espeon_male', 'mehrak_battle')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.bedrock('multiverse_espeon_male', 'mehrak')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_espeon_male', 'mehrak')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.76,
+  "profileTranslation": [
+    0,
+    0.62,
+    0
+  ],
+  "rootBone": "espeon"
+}

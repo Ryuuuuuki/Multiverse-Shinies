@@ -77,13 +77,8 @@
     }
    }
   },
-  "animation.multiverse_umbreon_male.cry": {
+  "animation.multiverse_umbreon_male.signature": {
    "animation_length": 1.4,
-   "sound_effects": {
-    "0.04": {
-     "effect": "pokemon.umbreon.cry"
-    }
-   },
    "bones": {
     "geo_orbit": {
      "rotation": {

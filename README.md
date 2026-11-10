@@ -11,18 +11,18 @@ Os modelos, texturas, animações e o sorteio ficam dentro do jar (em `src/main/
 | Magikarp (macho e fêmea) | ✅ | padrão | ✅ | Funcional |
 | Gyarados | ✅ | padrão | ✅ | Funcional |
 | Eevee (macho e fêmea) | ✅ | ✅ | ✅ | Funcional |
-| Flareon (macho) — "Diluc" | ✅ | ✅ | ✅ | Funcional (animações do original) |
-| Flareon (fêmea) — "Mavuika" | ✅ | ✅ | ✅ | Funcional (animações do original; pontas do cabelo brilham e óculos translúcidos via camadas) |
+| Flareon (macho) — "Diluc" | ✅ | ✅ | ✅ | Funcional (poser próprio: brasas sobem do pelo e a espada brilha em brasa; em batalha ele crava a Lápide do Lobo no chão ao lado; quando usa golpe de Fogo uma fênix de fogo sai voando dele, a Alvorada) |
+| Flareon (fêmea) — "Mavuika" | ✅ | ✅ | ✅ | Funcional (poser próprio: um sol de Arconte Pyro queima atrás dela, com chamas animadas quadro a quadro, e cresce em batalha; quando usa golpe de Fogo o sol sobe girando, cai na frente dela e vira um anel de fogo no chão; pontas do cabelo brilham e óculos translúcidos via camadas) |
 | Jolteon (macho) — "Flins" | ✅ | ✅ | ✅ | Funcional (lanterna animada no quadril: balança, chama azul brilha pelo vidro e reage nas batalhas) |
-| Jolteon (fêmea) — "Fischl" | ✅ | ✅ | ✅ | Funcional (animações do original; arco nas costas) |
-| Umbreon (macho) — "Zhongli" | ✅ | ✅ | ✅ | Funcional (poser próprio: três cristais Geo orbitam em volta dele o tempo todo; em batalha ergue o Escudo de Jade, uma casca dourada translúcida com treliça animada (arte gerada no PixelLab) que gira devagar; no cry os cristais giram, sobem e descem num impacto e o escudo pulsa; anéis, gemas, cristais e escudo brilham via camada animada) |
-| Umbreon (fêmea) — "Hu Tao" | ✅ | ✅ | ✅ | Funcional (poser próprio: o fantasminha Boo Tao flutua do lado dela e três borboletas de fogo rondam o casaco; no cry o Boo Tao gira no ar e o chapéu pula; anéis, flores, Boo Tao e borboletas brilham e pulsam via camada animada) |
-| Espeon (macho) — "Kaveh" | ✅ | ✅ | ✅ | Funcional (animações do original; capa em duas faixas, Visão Dendro e gemas brilham via camada) |
-| Espeon (fêmea) — "Citlali" | ✅ | ✅ | ✅ | Funcional (animações do original; anéis flutuando atrás das orelhas, saia longa; joia da testa brilha via camada) |
-| Sylveon (fêmea) — "Varesa" | ✅ | ✅ | ✅ | Funcional (animações do original; tranças nas fitas, chifres, saia e polainas) |
+| Jolteon (fêmea) — "Fischl" | ✅ | ✅ | ✅ | Funcional (poser próprio: o corvo Oz voa em círculos em volta dela e, em batalha, paira de guarda no ombro; quando usa golpe Elétrico ele mergulha numa explosão Electro e um selo se abre no chão; arco nas costas brilha) |
+| Umbreon (macho) — "Zhongli" | ✅ | ✅ | ✅ | Funcional (poser próprio: três cristais Geo orbitam em volta dele o tempo todo; em batalha ergue o Escudo de Jade, uma casca dourada translúcida com treliça animada (arte gerada no PixelLab) que gira devagar; quando usa golpe de Pedra, Terra ou Sombrio os cristais giram, sobem e descem num impacto e o escudo pulsa; anéis, gemas, cristais e escudo brilham via camada animada) |
+| Umbreon (fêmea) — "Hu Tao" | ✅ | ✅ | ✅ | Funcional (poser próprio: o fantasminha Boo Tao flutua do lado dela e três borboletas de fogo rondam o casaco; quando usa golpe de Fogo, Fantasma ou Sombrio o Boo Tao gira no ar e o chapéu pula; anéis, flores, Boo Tao e borboletas brilham e pulsam via camada animada) |
+| Espeon (macho) — "Kaveh" | ✅ | ✅ | ✅ | Funcional (poser próprio: o Mehrak flutua do lado dele com uma carinha animada na tela, que pisca, olha pros lados e sorri; em batalha abre os bracinhos; quando usa golpe de Planta ou Psíquico dá uma cambalhota e uma planta de arquitetura Dendro se abre no chão; capa em duas faixas, Visão Dendro e gemas brilham via camada) |
+| Espeon (fêmea) — "Citlali" | ✅ | ✅ | ✅ | Funcional (poser próprio: o Itzpapa, uma caveirinha de obsidiana com olhos turquesa e uma flor, flutua do lado dela batendo a mandíbula, com cristais de gelo em volta; quando usa golpe de Gelo ou Psíquico um anel de cristais de gelo brota do chão; anéis atrás das orelhas, saia longa, joia da testa brilha) |
+| Sylveon (fêmea) — "Varesa" | ✅ | ✅ | ✅ | Funcional (poser próprio: faz malabarismo com três frutas sobre a cabeça; em batalha as frutas giram em volta dos chifres soltando faíscas Electro; quando usa golpe Elétrico ou Fada dá a Voadora: pulo, mortal pra frente e um POW! com onda de choque arco-íris; tranças nas fitas, chifres, saia e polainas) |
 | Sylveon (macho) — "Dahlia" | ✅ | ✅ | ✅ | Funcional (livro mágico animado voando em volta; reage nas batalhas) |
-| Vaporeon (fêmea) — "Furina" | ✅ | ✅ | ✅ | Funcional (animações do original) |
-| Vaporeon (macho) — "Neuvillette" | ✅ | ✅ | ✅ | Funcional (animações do original) |
+| Vaporeon (fêmea) — "Furina" | ✅ | ✅ | ✅ | Funcional (poser próprio: o Salão Solitário, com o Gentilhomme Usher de cartola, a Surintendante Chevalmarin e a Mademoiselle Crabaletta, dança em volta dela e fecha a formação em batalha; quando usa golpe de Água ela faz uma reverência teatral debaixo de um holofote) |
+| Vaporeon (macho) — "Neuvillette" | ✅ | ✅ | ✅ | Funcional (poser próprio: três Gotas de Água-Fonte orbitam em volta dele e os chifres brilham; quando usa golpe de Água ele absorve as gotas e solta o Julgamento Equitativo, um jato de água pra onde estiver olhando) |
 | Infernape — cosplay de Super Saiyajin 4 | ✅ | ✅ | ✅ | Funcional (animações do original; fogo do cabelo animado; jaqueta de pelo vermelho, faixa, calça de gi, munhequeiras e botas; jubinhas de fogo nos ombros; cabelo que ilumina; voa numa nuvem atrás do treinador; **fúria** com explosão de aura quando recebe buff na batalha) |
 | Chimchar — "Goku criança" | ✅ | ✅ | ✅ | Funcional (animações do original; gi vermelho do Goku criança) |
 | Monferno — cosplay do Goku | ✅ | ✅ | ✅ | Funcional (gi, faixa, munhequeiras, botas e o bastão Nyoibo nas costas; em batalha segura o bastão em pé como na figure, com animação própria; **vira Super Saiyajin** quando recebe buff: bate o bastão no chão, o pelo fica dourado, aura dourada com raios) |
@@ -209,21 +209,23 @@ O Mega Slifer é a mega evolução do Slifer. Ele só funciona com o mod [Mega S
 
 Ele usa o modelo `multiverse_megarayquaza.geo.json`, as texturas `rayquaza_multiverse_mega.png` e `rayquaza_multiverse_mega_emissive.png` (fitas, olhos e joia brilham) e o poser `rayquaza_multiverse_mega.json`. As animações (`multiverse_megarayquaza.animation.json`) são as do Mega Rayquaza do Mega Showdown com as asas batendo no `ground_idle` e no `ground_walk`, mais `air_fly`, `air_idle` e `eye_size` no estilo do Slifer.
 
-A Flareon "Mavuika" usa duas camadas extras no resolver: `flareon_multiverse_female_emissive.png` (pontas neon do cabelo, brilham no escuro) e `flareon_multiverse_female_lenses.png` (lentes dos óculos, translúcidas).
+A Flareon "Mavuika" usa duas camadas extras no resolver: a de brilho animada (`flareon_multiverse_female_emissive1..16.png`: pontas neon do cabelo e o sol) e `flareon_multiverse_female_lenses.png` (lentes dos óculos, translúcidas).
 
 ## Problemas conhecidos
 
 - O Cobblemon não faz Rayquaza nascer sozinho; o Rayquaza Multiverse só aparece se outro mod (ou um comando) criar um Rayquaza.
 - As outras evoluções do Eevee (Leafeon e Glaceon) ainda não têm variante.
 
+### Extras de personagem (companheiros, efeitos e cries)
+
+Hu Tao, Zhongli, Fischl, Kaveh, Citlali, Furina, Neuvillette, Diluc, Mavuika e Varesa (além de Flins e Dahlia, que têm animações próprias) têm um poser próprio em `posers/` com uma animação de idle fora de batalha e outra só em batalha (pose `battle-standing`, `isBattle: true`). O grito é o da espécie e o efeito grande do personagem é a animação `signature`, que toca quando ele usa um golpe do elemento dele (Fogo, Fantasma ou Sombrio para Hu Tao; Pedra, Terra ou Sombrio para Zhongli; Fogo para Diluc e Mavuika, Água para Furina e Neuvillette, Elétrico para Fischl, Planta ou Psíquico para Kaveh, Gelo ou Psíquico para Citlali, Elétrico ou Fada para Varesa). O Cobblemon procura no poser uma animação com o nome do golpe, então o poser liga cada golpe de dano desses tipos à `signature`. As animações ficam em `animations/<espécie>/multiverse_<espécie>_<gênero>.animation.json`.
+
+- A camada de brilho de cada um virou animada (`<textura>_emissive1.png` em diante, 8 quadros por segundo, translúcida): olhos, faíscas, chamas e efeitos piscam e pulsam quadro a quadro. O Kaveh usa 32 quadros (a carinha do Mehrak tem um ciclo de 4 segundos).
+- Os efeitos grandes dos golpes (fênix, sol, jato d'água, selos, anéis de gelo, holofote, POW!) existem só na camada de brilho e ficam escondidos dentro do corpo, em escala bem pequena; as animações de idle seguram essa escala e a `signature` multiplica de volta pro tamanho cheio.
+
 ## Próximas atualizações
 
-- **Animações próprias para os Pokémon Multiverse.** O Rayquaza "Slifer" já tem as suas; os outros ainda usam as animações e o poser da espécie original. A ideia é criar animações que combinem com cada personagem, por exemplo:
-  - Flareon "Diluc": balançar a espada nas costas no idle, golpe de espada no ataque.
-  - Flareon "Mavuika": ajeitar os óculos no idle, chamas do cabelo mais vivas ao andar.
-  - Vaporeon "Furina": pose teatral, girando e fazendo reverência com a cartola.
-  - Vaporeon "Neuvillette": postura séria e elegante, abaixando a cabeça como cumprimento.
-  - Cada animação nova precisa de um poser próprio em `posers/` apontado pelo resolver da variante.
+- **Animações próprias para os outros Pokémon Multiverse.** Magikarp, Gyarados, Eevee e Chimchar ainda usam as animações e o poser da espécie original.
 
 ## Licença
 

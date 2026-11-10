@@ -1,0 +1,114 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('jolteon', 'cry')",
+    "aurawheel": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "boltbeak": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "boltstrike": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "chargebeam": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "discharge": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "doubleshock": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "electroball": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "electrodrift": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "electroshot": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "electroweb": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "fusionbolt": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "hiddenpowerelectric": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "nuzzle": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "overdrive": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "paraboliccharge": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "plasmafists": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "risingvoltage": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "shockwave": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "spark": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "supercellslam": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thunder": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thunderbolt": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thundercage": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thunderclap": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thunderfang": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thunderpunch": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "thundershock": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "voltswitch": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "volttackle": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "wildboltstorm": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "wildcharge": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "zapcannon": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')",
+    "zingzap": "q.bedrock_stateful('multiverse_jolteon_female', 'signature')"
+  },
+  "portraitScale": 2.14,
+  "portraitTranslation": [
+    -0.75,
+    -0.11,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('jolteon', 'ground_idle')",
+        {
+          "animation": "q.bedrock('jolteon', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        "q.bedrock('multiverse_jolteon_female', 'oz_guard')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('jolteon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('jolteon', 'ground_idle')",
+        {
+          "animation": "q.bedrock('jolteon', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        "q.bedrock('multiverse_jolteon_female', 'oz_patrol')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('jolteon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('jolteon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'backleg_left', 'backleg_right')",
+        {
+          "animation": "q.bedrock('jolteon', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        "q.bedrock('multiverse_jolteon_female', 'oz_patrol')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('jolteon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.75,
+  "profileTranslation": [
+    0,
+    0.62,
+    0
+  ],
+  "rootBone": "jolteon"
+}

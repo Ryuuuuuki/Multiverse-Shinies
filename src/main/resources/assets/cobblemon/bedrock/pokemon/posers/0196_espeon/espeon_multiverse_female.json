@@ -1,0 +1,126 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('espeon', 'cry')",
+    "aurorabeam": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "avalanche": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "blizzard": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "freezedry": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "freezeshock": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "frostbreath": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "glaciallance": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "glaciate": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "hiddenpowerice": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "iceball": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icebeam": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "iceburn": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icefang": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icehammer": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icepunch": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "iceshard": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icespinner": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "iciclecrash": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "iciclespear": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "icywind": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "mountaingale": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "powdersnow": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "sheercold": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "tripleaxel": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "confusion": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "dreameater": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "eeriespell": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "esperwing": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "expandingforce": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "extrasensory": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "freezingglare": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "futuresight": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "heartstamp": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "hiddenpowerpsychic": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "hyperspacehole": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "luminacrash": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "lusterpurge": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "mirrorcoat": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "mistball": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "mysticalpower": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "photongeyser": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "prismaticlaser": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psybeam": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psyblade": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psychic": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psychicfangs": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psychicnoise": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psychoboost": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psychocut": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psyshieldbash": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psyshock": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psystrike": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "psywave": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "storedpower": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "synchronoise": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "twinbeam": "q.bedrock_stateful('multiverse_espeon_female', 'signature')",
+    "zenheadbutt": "q.bedrock_stateful('multiverse_espeon_female', 'signature')"
+  },
+  "portraitScale": 2.14,
+  "portraitTranslation": [
+    -0.68,
+    0.25,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.bedrock('multiverse_espeon_female', 'itzpapa_battle')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.bedrock('multiverse_espeon_female', 'itzpapa')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('espeon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_espeon_female', 'itzpapa')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espeon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.76,
+  "profileTranslation": [
+    0,
+    0.62,
+    0
+  ],
+  "rootBone": "espeon"
+}

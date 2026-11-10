@@ -1,0 +1,107 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('vaporeon', 'cry')",
+    "aquacutter": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "aquajet": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "aquastep": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "aquatail": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "brine": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "bubble": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "bubblebeam": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "chillingwater": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "clamp": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "crabhammer": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "dive": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "fishiousrend": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "flipturn": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "hiddenpowerwater": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "hydrocannon": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "hydropump": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "hydrosteam": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "jetpunch": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "liquidation": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "muddywater": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "octazooka": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "originpulse": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "razorshell": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "scald": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "snipeshot": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "sparklingaria": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "steameruption": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "surf": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "surgingstrikes": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "tripledive": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "waterfall": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "watergun": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "waterpledge": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "waterpulse": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "watershuriken": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "waterspout": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "wavecrash": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')",
+    "whirlpool": "q.bedrock_stateful('multiverse_vaporeon_female', 'signature')"
+  },
+  "portraitScale": 2.08,
+  "portraitTranslation": [
+    -0.7,
+    -0.37,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('vaporeon', 'ground_idle')",
+        "q.bedrock('multiverse_vaporeon_female', 'salon_battle')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('vaporeon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('vaporeon', 'ground_idle')",
+        "q.bedrock('multiverse_vaporeon_female', 'salon')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('vaporeon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('vaporeon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'frontleg_left', 'frontleg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_vaporeon_female', 'salon')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('vaporeon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.85,
+  "profileTranslation": [
+    0,
+    0.45,
+    0
+  ],
+  "rootBone": "vaporeon"
+}

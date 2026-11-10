@@ -1,0 +1,116 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('sylveon', 'cry')",
+    "aurawheel": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "boltbeak": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "boltstrike": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "chargebeam": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "discharge": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "doubleshock": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "electroball": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "electrodrift": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "electroshot": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "electroweb": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "fusionbolt": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "hiddenpowerelectric": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "nuzzle": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "overdrive": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "paraboliccharge": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "plasmafists": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "risingvoltage": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "shockwave": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "spark": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "supercellslam": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thunder": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thunderbolt": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thundercage": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thunderclap": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thunderfang": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thunderpunch": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "thundershock": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "voltswitch": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "volttackle": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "wildboltstorm": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "wildcharge": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "zapcannon": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "zingzap": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "alluringvoice": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "dazzlinggleam": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "disarmingvoice": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "drainingkiss": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "fairywind": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "fleurcannon": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "lightofruin": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "mistyexplosion": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "moonblast": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "naturesmadness": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "playrough": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "spiritbreak": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "springtidestorm": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')",
+    "strangesteam": "q.bedrock_stateful('multiverse_sylveon_female', 'signature')"
+  },
+  "portraitScale": 1.97,
+  "portraitTranslation": [
+    -0.51,
+    0.33,
+    0
+  ],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('sylveon', 'ground_idle')",
+        "q.bedrock('multiverse_sylveon_female', 'juggle_battle')"
+      ],
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sylveon', 'blink')"
+      ]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('sylveon', 'ground_idle')",
+        "q.bedrock('multiverse_sylveon_female', 'juggle')"
+      ],
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "FLOAT"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sylveon', 'blink')"
+      ]
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 1, 70, -45, 45, -45)",
+        "q.bedrock('sylveon', 'ground_idle')",
+        "q.quadruped_walk(0.66, 1.4, 'front_leg_left', 'front_leg_right', 'back_leg_left', 'back_leg_right')",
+        "q.bedrock('multiverse_sylveon_female', 'juggle')"
+      ],
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sylveon', 'blink')"
+      ]
+    }
+  },
+  "profileScale": 0.77,
+  "profileTranslation": [
+    0,
+    0.57,
+    0
+  ],
+  "rootBone": "sylveon"
+}

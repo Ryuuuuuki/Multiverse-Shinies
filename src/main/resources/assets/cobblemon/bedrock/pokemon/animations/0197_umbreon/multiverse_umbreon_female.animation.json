@@ -104,7 +104,7 @@
     }
    }
   },
-  "animation.multiverse_umbreon_female.cry": {
+  "animation.multiverse_umbreon_female.signature": {
    "animation_length": 1.2,
    "bones": {
     "boo_tao": {
@@ -466,11 +466,6 @@
        "lerp_mode": "catmullrom"
       }
      }
-    }
-   },
-   "sound_effects": {
-    "0.04": {
-     "effect": "pokemon.umbreon.cry"
     }
    }
   }

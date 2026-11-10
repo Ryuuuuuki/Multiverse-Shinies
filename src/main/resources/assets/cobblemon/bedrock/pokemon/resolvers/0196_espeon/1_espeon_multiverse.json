@@ -7,6 +7,7 @@
         "multiverseshinies",
         "female"
       ],
+      "poser": "cobblemon:espeon_multiverse_female",
       "model": "cobblemon:multiverse_espeon_female.geo",
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female.png",
       "layers": [
@@ -14,7 +15,28 @@
           "name": "emissive",
           "emissive": true,
           "translucent": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive.png"
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive1.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive2.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive3.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive4.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive5.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive6.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive7.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive8.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive9.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive10.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive11.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive12.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive13.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive14.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive15.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_female_emissive16.png"
+            ],
+            "fps": 8,
+            "loop": true
+          }
         }
       ]
     },
@@ -23,6 +45,7 @@
         "multiverseshinies",
         "male"
       ],
+      "poser": "cobblemon:espeon_multiverse_male",
       "model": "cobblemon:multiverse_espeon_male.geo",
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male.png",
       "layers": [
@@ -30,7 +53,44 @@
           "name": "emissive",
           "emissive": true,
           "translucent": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive.png"
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive1.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive2.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive3.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive4.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive5.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive6.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive7.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive8.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive9.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive10.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive11.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive12.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive13.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive14.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive15.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive16.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive17.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive18.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive19.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive20.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive21.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive22.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive23.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive24.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive25.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive26.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive27.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive28.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive29.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive30.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive31.png",
+              "cobblemon:textures/pokemon/0196_espeon/espeon_multiverse_male_emissive32.png"
+            ],
+            "fps": 8,
+            "loop": true
+          }
         }
       ]
     }
